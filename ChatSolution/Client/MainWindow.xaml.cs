@@ -35,5 +35,15 @@ namespace Client
                 }
             });
         }
+
+        private void Form_of_Show(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Label_TextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+
+        }
     }
 }
