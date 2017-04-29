@@ -14,7 +14,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>
           
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="235"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
             <TextBlock x:Name="res"  Height="200" Background="White" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
@@ -28,8 +28,9 @@
         </StackPanel>
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Sign In or Registration" Margin="5" Click="Form_of_Show"></Button>
+                <Button Content="Sign In" Margin="5" Click="Form_of_Show" Width="51"></Button>
                 <Button Content="Sign Out" Margin="5" Click="Form_of_Show" Width="78"></Button>
+                <Button Content="Registration" Margin="5" Click="Form_of_Show" Width="78"></Button>
 
             </StackPanel>
         </StackPanel>
