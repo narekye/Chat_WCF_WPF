@@ -8,7 +8,7 @@
 
         Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize" Activated="MainWindow_OnActivated"  >
     <Window.Background>
-        <ImageBrush x:Name="img" ImageSource="C:\Users\ha.harutyunyan\Source\Repos\Chat_WCF_WPF\ChatSolution\Client\Images\Image1.jpg" Stretch="UniformToFill"/>
+        <ImageBrush x:Name="img" ImageSource="Images\Image1.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
