@@ -12,5 +12,11 @@ namespace ChatLibrary
     {
         [OperationContract]
         string GetData(string name, string message);
+
+        [OperationContract]
+        bool Register(User value);
+
+        [OperationContract]
+        List<User> GetAllMembers();
     }
 }

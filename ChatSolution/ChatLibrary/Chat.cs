@@ -6,7 +6,7 @@ namespace ChatLibrary
 {
     public class Chat : IChat
     {
-        private List<User> users;
+        private static List<User> users = new List<User>();
         public string GetData(string name, string message)
         {
             return "Sended from: " + name + " - " + message + " At: " + DateTime.Now.ToShortTimeString();
@@ -14,12 +14,17 @@ namespace ChatLibrary
 
         public bool Register(User user)
         {
-            if (users.Exists(x => x.Name == user.Name))
-            {
-                return false;
-            }
+            //if (users.Exists(x => x.Name == user.Name))
+            //{
+            //    return false;
+            //}
             users.Add(user);
             return true;
+        }
+
+        public List<User> GetAllMembers()
+        {
+            return users;
         }
     }
 
