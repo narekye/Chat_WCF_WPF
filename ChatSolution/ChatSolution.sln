@@ -5,6 +5,16 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat_Library", "Chat_Library\Chat_Library.csproj", "{4ED206C8-DAB3-4723-A17B-677A47F19922}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEST", "TEST\TEST.csproj", "{C9CFB7FC-96CF-45B3-A7D4-1E66487D0BE2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4ED206C8-DAB3-4723-A17B-677A47F19922} = {4ED206C8-DAB3-4723-A17B-677A47F19922}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{5EF1D52A-2BBA-4A1C-99C3-7E94A05413A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4ED206C8-DAB3-4723-A17B-677A47F19922} = {4ED206C8-DAB3-4723-A17B-677A47F19922}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,14 @@ Global
 		{4ED206C8-DAB3-4723-A17B-677A47F19922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ED206C8-DAB3-4723-A17B-677A47F19922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ED206C8-DAB3-4723-A17B-677A47F19922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9CFB7FC-96CF-45B3-A7D4-1E66487D0BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9CFB7FC-96CF-45B3-A7D4-1E66487D0BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9CFB7FC-96CF-45B3-A7D4-1E66487D0BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9CFB7FC-96CF-45B3-A7D4-1E66487D0BE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF1D52A-2BBA-4A1C-99C3-7E94A05413A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF1D52A-2BBA-4A1C-99C3-7E94A05413A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF1D52A-2BBA-4A1C-99C3-7E94A05413A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF1D52A-2BBA-4A1C-99C3-7E94A05413A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

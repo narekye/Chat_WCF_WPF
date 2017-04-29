@@ -1,0 +1,19 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize" Activated="MainWindow_OnActivated"  >
+    <Grid Background="CadetBlue">
+        <StackPanel>
+            <TextBlock x:Name="res"  Height="200" Background="White" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
+            <Grid>
+                <TextBox x:Name="message" Height="20" Background="Teal" Foreground="Chartreuse" Margin="10,5,260,5">Enter your message</TextBox>
+                <TextBox x:Name="name" Height="20" Background="Teal" Foreground="Chartreuse" Margin="0,5,4,5" HorizontalAlignment="Right" Width="251">Enter your name</TextBox>
+            </Grid>
+            <Button Content="Send Message" Margin="10 5 10 5" Click="Send_Message"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

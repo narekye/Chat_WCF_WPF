@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="16675536-44a6-400d-a4cd-f00b0e9f0fa4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Chat_Library/Chatable/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="3baeff9c-a7ec-4e25-bfea-053238854d05" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Chat_Library/Chatable/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="a5d558a3-2062-44f0-a5d8-7352979e8722" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Chat_Library/Chatable/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b80fac41-b5ae-48c9-bd3c-4d855113a362" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Chat_Library/Chatable/mex" />
+    <MetadataFile FileName="Chat_Library.xsd" MetadataType="Schema" ID="ea432640-4926-4a2d-a1c7-dd7238859c54" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Chat_Library/Chatable/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
