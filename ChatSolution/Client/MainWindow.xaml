@@ -5,15 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
+
         Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize" Activated="MainWindow_OnActivated"  >
-    <Grid Background="CadetBlue">
-        <StackPanel>
+    <Window.Background>
+        <ImageBrush x:Name="img" ImageSource="C:\Users\ha.harutyunyan\Source\Repos\Chat_WCF_WPF\ChatSolution\Client\Images\Image1.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+          
+            <ColumnDefinition Width="235"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
             <TextBlock x:Name="res"  Height="200" Background="White" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
-            <Grid>
-                <TextBox x:Name="message" Height="20" Background="Teal" Foreground="Chartreuse" Margin="10,5,260,5">Enter your message</TextBox>
-                <TextBox x:Name="name" Height="20" Background="Teal" Foreground="Chartreuse" Margin="0,5,4,5" HorizontalAlignment="Right" Width="251">Enter your name</TextBox>
-            </Grid>
-            <Button Content="Send Message" Margin="10 5 10 5" Click="Send_Message"></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="message" Height="20" Background="#FFC3E7FD" Margin="5" Foreground="Chartreuse" Width="196" ></TextBox>
+
+                <Button Content="Send" Margin="5" Click="Send_Message" Width="61"></Button>
+            </StackPanel>
+            <Label Background="Aqua" Height="21" Margin="5,0,10,0" TextInput="Label_TextInput"/>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Sign In" Margin="5" Click="Form_of_Show" Width="51"></Button>
+                <Button Content="Sign Out" Margin="5" Click="Form_of_Show" Width="78"></Button>
+                <Button Content="Registration" Margin="5" Click="Form_of_Show" Width="78"></Button>
+
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
