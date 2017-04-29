@@ -31,7 +31,6 @@
                 <Button Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
                 <Button Content="Sign Out" Margin="5" Click="Out_of_Show" Width="78"></Button>
                 <Button Content="Registration" Margin="5" Click="Reg_of_Show" Width="73"></Button>
-
             </StackPanel>
         </StackPanel>
     </Grid>
