@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
 
-        Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize"  >
+        Title="ChoiceChat" Height="310" Width="530" ResizeMode="CanMinimize"  >
     <Window.Background>
         <ImageBrush x:Name="img" ImageSource="Images\Image1.jpg" Stretch="UniformToFill"/>
     </Window.Background>
@@ -30,7 +30,7 @@
             <StackPanel Orientation="Horizontal">
                 <Button Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
                 <Button Content="Sign Out" Margin="5" Click="Out_of_Show" Width="78"></Button>
-                <Button Content="Registration" Margin="5" Click="Reg_of_Show" Width="73"></Button>
+                <Button Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
             </StackPanel>
             <ListBox x:Name="listBox" Margin="5" Height="170"/>
             <StackPanel Orientation="Horizontal">
