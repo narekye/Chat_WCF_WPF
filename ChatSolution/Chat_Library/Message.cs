@@ -17,5 +17,6 @@ namespace Chat_Library
         public int MessageId { get; set; }
         public string MessageSender { get; set; }
         public string MessageContent { get; set; }
+        public string MessageTIme { get; set; }
     }
 }

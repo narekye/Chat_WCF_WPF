@@ -13,10 +13,10 @@ namespace Chat_Library
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MessagesContext : DbContext
+    public partial class MessagesContext_ : DbContext
     {
-        public MessagesContext()
-            : base("name=MessagesContext")
+        public MessagesContext_()
+            : base("name=MessagesContext_")
         {
         }
     

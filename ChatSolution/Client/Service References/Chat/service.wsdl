@@ -19,11 +19,11 @@
   <wsdl:message name="IChatable_GetMessages_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetMessagesResponse" />
   </wsdl:message>
-  <wsdl:message name="IChatable_Login_InputMessage">
-    <wsdl:part name="parameters" element="tns:Login" />
+  <wsdl:message name="IChatable_LoginAsync_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginAsync" />
   </wsdl:message>
-  <wsdl:message name="IChatable_Login_OutputMessage">
-    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  <wsdl:message name="IChatable_LoginAsync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginAsyncResponse" />
   </wsdl:message>
   <wsdl:message name="IChatable_Register_InputMessage">
     <wsdl:part name="parameters" element="tns:Register" />
@@ -46,9 +46,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetMessages" message="tns:IChatable_GetMessages_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetMessagesResponse" message="tns:IChatable_GetMessages_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Login">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Login" message="tns:IChatable_Login_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/LoginResponse" message="tns:IChatable_Login_OutputMessage" />
+    <wsdl:operation name="LoginAsync">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/LoginAsync" message="tns:IChatable_LoginAsync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/LoginAsyncResponse" message="tns:IChatable_LoginAsync_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Register">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Register" message="tns:IChatable_Register_InputMessage" />
@@ -79,8 +79,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Login">
-      <soap:operation soapAction="http://tempuri.org/IChatable/Login" style="document" />
+    <wsdl:operation name="LoginAsync">
+      <soap:operation soapAction="http://tempuri.org/IChatable/LoginAsync" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
