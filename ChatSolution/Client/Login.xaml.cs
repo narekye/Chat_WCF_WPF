@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using Client.Chat;
+using System.Windows.Input;
 
 namespace Client
 { 
@@ -34,6 +35,14 @@ namespace Client
                 MainWindow.user = user;
             MessageBox.Show("Good...");
             this.Close();
+        }
+
+        private void Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                button_Click(null, null);
+            }
         }
     }
 }
