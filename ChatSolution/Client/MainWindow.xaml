@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize" Activated="MainWindow_OnActivated"  >
+        Title="Chat_Sample" Height="325.949" Width="525" ResizeMode="NoResize" Activated="Refresh_Block"  >
     <Grid Background="CadetBlue">
         <StackPanel>
-            <TextBlock x:Name="res"  Height="200" Background="White" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
+            <TextBox x:Name="res"  Height="200"  Background="White"  Margin="5 5 5 5" VerticalAlignment="Top"></TextBox>
             <Grid>
-                <TextBox x:Name="message" Height="20" Background="Teal" Foreground="Chartreuse" Margin="10,5,260,5">Enter your message</TextBox>
+                <TextBox x:Name="message" Height="20" Background="Teal"  Foreground="Chartreuse" Margin="10,5,260,5">Enter your message</TextBox>
                 <TextBox x:Name="name" Height="20" Background="Teal" Foreground="Chartreuse" Margin="0,5,4,5" HorizontalAlignment="Right" Width="251">Enter your name</TextBox>
             </Grid>
             <Button Content="Send Message" Margin="10 5 10 5" Click="Send_Message"></Button>
+            <Button Content="Refreah" Click="ButtonBase_OnClick"></Button>
         </StackPanel>
     </Grid>
 </Window>

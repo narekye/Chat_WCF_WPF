@@ -12,10 +12,12 @@ namespace Chat_Library
     using System;
     using System.Collections.Generic;
     
-    public partial class Message
+    public partial class User
     {
-        public int MessageId { get; set; }
-        public string MessageSender { get; set; }
-        public string MessageContent { get; set; }
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+        public string NickName { get; set; }
+        public string UserPassword { get; set; }
+        public string Email { get; set; }
     }
 }

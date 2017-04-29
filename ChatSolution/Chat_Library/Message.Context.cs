@@ -26,5 +26,6 @@ namespace Chat_Library
         }
     
         public virtual DbSet<Message> Messages { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

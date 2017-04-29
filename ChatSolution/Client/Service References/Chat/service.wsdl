@@ -19,6 +19,18 @@
   <wsdl:message name="IChatable_GetMessages_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetMessagesResponse" />
   </wsdl:message>
+  <wsdl:message name="IChatable_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
   <wsdl:portType name="IChatable">
     <wsdl:operation name="Send">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Send" message="tns:IChatable_Send_InputMessage" />
@@ -27,6 +39,14 @@
     <wsdl:operation name="GetMessages">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetMessages" message="tns:IChatable_GetMessages_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetMessagesResponse" message="tns:IChatable_GetMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Login" message="tns:IChatable_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/LoginResponse" message="tns:IChatable_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Register" message="tns:IChatable_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/RegisterResponse" message="tns:IChatable_Register_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IChatable" type="tns:IChatable">
@@ -42,6 +62,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetMessages">
       <soap:operation soapAction="http://tempuri.org/IChatable/GetMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IChatable/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IChatable/Register" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
