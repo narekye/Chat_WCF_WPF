@@ -16,7 +16,7 @@ namespace Client
         {
             Message msg = new Message()
             {
-                MessageSender = name.Text,
+                
                 MessageContent = message.Text
             };
             proxy.Send(msg);
@@ -36,14 +36,17 @@ namespace Client
             });
         }
 
-        private void Form_of_Show(object sender, RoutedEventArgs e)
+        private void Reg_of_Show(object sender, RoutedEventArgs e) => new Registration().Show();
+        private void Sign_of_Show(object sender, RoutedEventArgs e) => new Login().Show();
+        private void Out_of_Show(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Label_TextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
-        {
 
-        }
+
+
+
+
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
 
-        Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize" Activated="MainWindow_OnActivated"  >
+        Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize"  >
     <Window.Background>
         <ImageBrush x:Name="img" ImageSource="Images\Image1.jpg" Stretch="UniformToFill"/>
     </Window.Background>
@@ -19,18 +19,18 @@
         <StackPanel Grid.Column="0">
             <TextBlock x:Name="res"  Height="200" Background="White" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="message" Height="20" Background="#FFC3E7FD" Margin="5" Foreground="Chartreuse" Width="196" ></TextBox>
+                <TextBox x:Name="message" Height="20" Background="{x:Null}" Margin="5" Foreground="Chartreuse" Width="196" ></TextBox>
 
                 <Button Content="Send" Margin="5" Click="Send_Message" Width="61"></Button>
             </StackPanel>
-            <Label Background="Aqua" Height="21" Margin="5,0,10,0" TextInput="Label_TextInput"/>
+           <TextBlock x:Name="Label" Background="{x:Null}" Height="21" Margin="5,0,10,0" FontFamily="Script MT Bold" Foreground="White"/>
 
         </StackPanel>
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Sign In" Margin="5" Click="Form_of_Show" Width="51"></Button>
-                <Button Content="Sign Out" Margin="5" Click="Form_of_Show" Width="78"></Button>
-                <Button Content="Registration" Margin="5" Click="Form_of_Show" Width="78"></Button>
+                <Button Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
+                <Button Content="Sign Out" Margin="5" Click="Out_of_Show" Width="78"></Button>
+                <Button Content="Registration" Margin="5" Click="Reg_of_Show" Width="73"></Button>
 
             </StackPanel>
         </StackPanel>
