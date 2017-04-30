@@ -1,22 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Client.Chat;
 
 namespace Client
 {
-    /// <summary>
-    /// Interaction logic for Registration.xaml
-    /// </summary>
     public partial class Registration : Window
     {
         public Registration()
@@ -26,8 +12,16 @@ namespace Client
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-
+            User user = new User()
+            {
+                NickName = Nickname.Text,
+                UserName = Username.Text,
+                Email = Email.Text,
+                UserPassword = Password.Text
+            };
+            MainWindow.proxy.SendMail(user);
+            MainWindow.proxy.Register(user);
+          
         }
-      
     }
 }

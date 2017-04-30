@@ -31,6 +31,9 @@ namespace Client.Chat {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MessageSenderField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageTImeField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -76,6 +79,19 @@ namespace Client.Chat {
                 if ((object.ReferenceEquals(this.MessageSenderField, value) != true)) {
                     this.MessageSenderField = value;
                     this.RaisePropertyChanged("MessageSender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MessageTIme {
+            get {
+                return this.MessageTImeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageTImeField, value) != true)) {
+                    this.MessageTImeField = value;
+                    this.RaisePropertyChanged("MessageTIme");
                 }
             }
         }

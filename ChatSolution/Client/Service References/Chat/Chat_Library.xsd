@@ -5,6 +5,7 @@
       <xs:element minOccurs="0" name="MessageContent" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MessageId" type="xs:int" />
       <xs:element minOccurs="0" name="MessageSender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageTIme" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Message" nillable="true" type="tns:Message" />
