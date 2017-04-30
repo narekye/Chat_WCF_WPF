@@ -56,55 +56,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChatable.cs" />
-    <Compile Include="Message.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Message.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Message.cs">
-      <DependentUpon>Message.tt</DependentUpon>
+      <DependentUpon>Messages.tt</DependentUpon>
     </Compile>
-    <Compile Include="Message.Designer.cs">
+    <Compile Include="Messages.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Message.edmx</DependentUpon>
+      <DependentUpon>Messages.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Message1.cs">
+    <Compile Include="Messages.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Message.tt</DependentUpon>
+      <DependentUpon>Messages.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Chatable.cs" />
     <Compile Include="User.cs">
-      <DependentUpon>Message.tt</DependentUpon>
+      <DependentUpon>Messages.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Message.edmx">
+    <EntityDeploy Include="Messages.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Message.edmx.diagram">
-      <DependentUpon>Message.edmx</DependentUpon>
+    <None Include="Messages.edmx.diagram">
+      <DependentUpon>Messages.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Message.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Message.edmx</DependentUpon>
-      <LastGenOutput>Message.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Message.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Message.edmx</DependentUpon>
-      <LastGenOutput>Message1.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Messages.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Messages.edmx</DependentUpon>
+      <LastGenOutput>Messages.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Messages.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Messages.edmx</DependentUpon>
+      <LastGenOutput>Messages.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Net.Mail;
-using System.Security.Policy;
 using System.Threading.Tasks;
 
 namespace Chat_Library
 {
     public class Chatable : IChatable
     {
-        private readonly MessagesContext db = new MessagesContext();
+        private readonly MessagesContext_ db = new MessagesContext_();
+        private static User loggedUser;
         public void Send(Message message)
         {
             db.Messages.Add(message);
@@ -18,9 +19,13 @@ namespace Chat_Library
         {
             return await db.Messages.ToListAsync();
         }
-        public async Task<bool> LoginAsync(User user)
+        public bool LoginAsync(User user)
         {
-            return await db.Users.ContainsAsync(user);
+            var list = (from d in db.Users
+                where d.NickName == user.NickName && d.UserPassword == user.UserPassword
+                select d).FirstOrDefault();
+            if (ReferenceEquals(list, null)) return false;
+            return true;
         }
         public void Register(User user)
         {

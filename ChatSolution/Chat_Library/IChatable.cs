@@ -12,7 +12,7 @@ namespace Chat_Library
         [OperationContract]
         Task<List<Message>> GetMessages();
         [OperationContract]
-        Task<bool> LoginAsync(User user);
+        bool LoginAsync(User user);
         [OperationContract]
         void Register(User user);
         [OperationContract]
