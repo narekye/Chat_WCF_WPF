@@ -43,8 +43,14 @@ namespace Client
         }
 
         private void Reg_of_Show(object sender, RoutedEventArgs e) => new Registration().Show();
-        private void Sign_of_Show(object sender, RoutedEventArgs e) => new Login().Show();
-
+        private void Sign_of_Show(object sender, RoutedEventArgs e)
+        {
+            new Login().Show();
+            if (user!=null)
+            {
+                SignOUT.IsEnabled = true;
+            }
+        }
 
         private void Out_of_Show(object sender, RoutedEventArgs e)
         {
