@@ -1,0 +1,22 @@
+﻿<Window x:Class="Client.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Login_" Height="300" Width="300">
+    <Window.Background>
+        <ImageBrush x:Name="SignIn" ImageSource="Images\Login.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <StackPanel>
+            <Label x:Name="label" Content="Login" HorizontalAlignment="Center" FontFamily="Ravie" FontSize="14" Foreground="#FF0DCDF7"/>
+            <TextBox Width="100" Name="Login_" Height="20"  Background="#FFF6F6F6" Margin="2" RenderTransformOrigin="0.538,-0.447" />
+            <Label x:Name="label1" Content="Password" FontFamily="Ravie" TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"/>
+            <PasswordBox x:Name="Password" Width="100" Height="20" Background="#FFF0F0F0" Margin="0 0 0 0" />
+            <CheckBox x:Name="Stay" Content="Stay" HorizontalAlignment="Center" Margin="10" FontFamily="Ravie"  Foreground="#FF00B4FF"/>
+            <Button x:Name="button" Content="Sign In" Background="Gold" FontFamily="Forte" Click="button_Click" Margin="102,10,103,10" FontSize="14" Foreground="#FF113DDD"/>
+        </StackPanel>
+    </Grid>
+</Window>
