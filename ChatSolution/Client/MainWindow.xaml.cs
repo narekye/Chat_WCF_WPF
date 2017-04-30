@@ -2,14 +2,13 @@
 using System.Windows;
 using Client.Chat;
 using System.Diagnostics;
-using System.Windows.Controls;
 
 namespace Client
 {
     public partial class MainWindow
     {
         public static User user;
-        public static ChatableClient proxy = new ChatableClient();
+        public static ChatableClient _proxy = new ChatableClient();
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +26,7 @@ namespace Client
                 MessageSender = user.NickName,
                 MessageContent = message.Text
             };
-            proxy.Send(msg);
+            _proxy.Send(msg);
             Refresh_Block(null, null);
         }
         private async void Refresh_Block(object sender, EventArgs e)
@@ -35,15 +34,22 @@ namespace Client
             if (ReferenceEquals(user, null))
             {
                 SignOUT.IsEnabled = false;
+                signin.IsEnabled = true;
+                reg.IsEnabled = true;
                 return;
             }
+            {
+                signin.IsEnabled = false;
+                SignOUT.IsEnabled = true;
+                reg.IsEnabled = false;
+            }
             res.Text = "";
-            var list = await proxy.GetMessagesAsync();
+            var list = await _proxy.GetMessagesAsync();
             Dispatcher.Invoke(() =>
             {
                 foreach (Message message1 in list)
                 {
-                    res.Text += message1.MessageSender + ": " + "\t" + message1.MessageContent + "\n";
+                    res.Text += message1.MessageSender + " : " + "\t" + message1.MessageContent + "\n";
                 }
             });
             Label.Text = "Logged in as: " + user.NickName;
@@ -64,8 +70,9 @@ namespace Client
         {
             user = null;
             MessageBox.Show("You have successfully signed out...");
+            Label.Text = "";
         }
-
+        #region BTNCLICKS
         private void NarGithub_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://github.com/narekye");
@@ -86,7 +93,7 @@ namespace Client
         {
             Process.Start("https://www.facebook.com/VANHAKOBYAN");
         }
-
+        #endregion
         private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
 
     }

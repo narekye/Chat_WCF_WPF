@@ -7,7 +7,7 @@ namespace Client
     public partial class Login
     {
         private static User user;
-        private static ChatableClient chat = MainWindow.proxy;
+        private static ChatableClient chat = MainWindow._proxy;
         public Login()
         {
             InitializeComponent();

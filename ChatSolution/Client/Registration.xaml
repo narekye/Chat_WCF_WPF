@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="Registration" Height="200" Width="300" ResizeMode="CanMinimize">
+        Title="Registration" Height="200" Width="300" ResizeMode="NoResize">
     <Window.Background>
         <ImageBrush x:Name="img" ImageSource="Images\Registration.jpg" Stretch="UniformToFill"/>
     </Window.Background>
@@ -15,12 +15,12 @@
             <ColumnDefinition Width="180"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
-        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
                 <Label Content="Username" FontFamily="Snap ITC" Foreground="#FF30B965" Margin="1" ></Label>
                 <Label Content="Nickname" Foreground="#FFFF00D6" FontFamily="Ravie" Margin="1"></Label>
                 <Label Content="Password" FontFamily="Script MT Bold" Foreground="#FFFF00D6" FontSize="16" Margin="1"></Label>
                 <Label Content="E-mail *" Foreground="#FFD7FF00" FontFamily="Script MT Bold" FontSize="16" Margin="1"></Label>
-        </StackPanel>
+            </StackPanel>
         </Grid>
         <Grid Grid.Column="1">
             <StackPanel Orientation="Vertical">
