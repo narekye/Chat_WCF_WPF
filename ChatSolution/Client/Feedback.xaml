@@ -13,7 +13,7 @@
     <Grid>
 
         <StackPanel>
-            <Label x:Name="mail" Content="E-mail" FontFamily="Segoe Print" FontWeight="Bold"   TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"></Label>
+            <Label x:Name="mail" Content="Gmail" FontFamily="Segoe Print" FontWeight="Bold"   TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"></Label>
             <TextBox x:Name="Email" Width="100" Height="20"  Background="#FFF6F6F6" Margin="2" RenderTransformOrigin="0.538,-0.447" />
             <Label x:Name="label1" Content="Password" FontFamily="Ravie" TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"/>
             <PasswordBox x:Name="Password" Margin="0 0 0 15" Width="100" Height="20" Background="#FFF0F0F0" KeyDown="Password_KeyDown" />

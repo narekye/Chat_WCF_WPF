@@ -28,15 +28,37 @@ namespace Client
 
         private void SendFeedback_Click(object sender, RoutedEventArgs e)
         {
-            string text = Text.Text;
-            NetworkCredential cre = new NetworkCredential(Email.Text, Password.Password);
-            MailMessage msg = new MailMessage(Email.Text, "vanhakobyan1996@gmail.com", "FeedBack", text);
-            SmtpClient sc = new SmtpClient("smtp.gmail.com", 587);
-            sc.UseDefaultCredentials = false;
-            sc.Credentials = cre;
-            sc.EnableSsl = true;
-            sc.Send(msg);
+            string text = Text.Text;         
+            string smtpAddress = "smtp.gmail.com";
+            int portNumber = 587;
+            bool enableSSL = true;
+            string emailFrom = Email.Text;
+            string password = Password.Password;
+            string emailTo = "vanhakobyan1996@gmail.com";
+            string subject = "FeedBack";
+            string body =text;
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress(emailFrom);
+            mail.To.Add(emailTo);
+            mail.Subject = subject;
+            mail.Body = body;
+            mail.IsBodyHtml = true;
+            using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+            {
+                smtp.Credentials = new NetworkCredential(emailFrom, password);
+                smtp.EnableSsl = enableSSL;
+                try
+                {
+                  smtp.Send(mail);
+                    MessageBox.Show("Your FeedBack Successfully Sent\n \t Thank You");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Input Correct Gmail and/or Password");
+                }
+            }
         }
+
         private void Password_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -45,6 +67,6 @@ namespace Client
             }
         }
 
-      
+
     }
 }
