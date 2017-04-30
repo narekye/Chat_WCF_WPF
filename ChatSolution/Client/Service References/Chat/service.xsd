@@ -25,17 +25,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LoginAsync">
+  <xs:element name="Login">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="user" nillable="true" type="q3:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LoginAsyncResponse">
+  <xs:element name="LoginResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="LoginAsyncResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="LoginResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -48,7 +48,9 @@
   </xs:element>
   <xs:element name="RegisterResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SendMail">

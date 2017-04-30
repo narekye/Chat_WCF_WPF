@@ -231,17 +231,17 @@ namespace Client.Chat {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetMessages", ReplyAction="http://tempuri.org/IChatable/GetMessagesResponse")]
         System.Threading.Tasks.Task<Client.Chat.Message[]> GetMessagesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/LoginAsync", ReplyAction="http://tempuri.org/IChatable/LoginAsyncResponse")]
-        bool LoginAsync(Client.Chat.User user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/Login", ReplyAction="http://tempuri.org/IChatable/LoginResponse")]
+        bool Login(Client.Chat.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/LoginAsync", ReplyAction="http://tempuri.org/IChatable/LoginAsyncResponse")]
-        System.Threading.Tasks.Task<bool> LoginAsyncAsync(Client.Chat.User user);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/Register", ReplyAction="http://tempuri.org/IChatable/RegisterResponse")]
-        void Register(Client.Chat.User user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/Login", ReplyAction="http://tempuri.org/IChatable/LoginResponse")]
+        System.Threading.Tasks.Task<bool> LoginAsync(Client.Chat.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/Register", ReplyAction="http://tempuri.org/IChatable/RegisterResponse")]
-        System.Threading.Tasks.Task RegisterAsync(Client.Chat.User user);
+        bool Register(Client.Chat.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/Register", ReplyAction="http://tempuri.org/IChatable/RegisterResponse")]
+        System.Threading.Tasks.Task<bool> RegisterAsync(Client.Chat.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/SendMail", ReplyAction="http://tempuri.org/IChatable/SendMailResponse")]
         void SendMail(Client.Chat.User user);
@@ -293,19 +293,19 @@ namespace Client.Chat {
             return base.Channel.GetMessagesAsync();
         }
         
-        public bool LoginAsync(Client.Chat.User user) {
+        public bool Login(Client.Chat.User user) {
+            return base.Channel.Login(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> LoginAsync(Client.Chat.User user) {
             return base.Channel.LoginAsync(user);
         }
         
-        public System.Threading.Tasks.Task<bool> LoginAsyncAsync(Client.Chat.User user) {
-            return base.Channel.LoginAsyncAsync(user);
+        public bool Register(Client.Chat.User user) {
+            return base.Channel.Register(user);
         }
         
-        public void Register(Client.Chat.User user) {
-            base.Channel.Register(user);
-        }
-        
-        public System.Threading.Tasks.Task RegisterAsync(Client.Chat.User user) {
+        public System.Threading.Tasks.Task<bool> RegisterAsync(Client.Chat.User user) {
             return base.Channel.RegisterAsync(user);
         }
         

@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using Client.Chat;
 
 namespace Client
@@ -13,18 +12,21 @@ namespace Client
 
         private async void Register_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Run(() =>
+            User user = new User
             {
-                User user = new User()
-                {
-                    NickName = Nickname.Text,
-                    UserName = Username.Text,
-                    Email = Email.Text,
-                    UserPassword = Password.Text
-                };
-                MainWindow.proxy.SendMail(user);
-                MainWindow.proxy.Register(user);
-            });
+                NickName = Nickname.Text,
+                UserName = Username.Text,
+                Email = Email.Text,
+                UserPassword = Password.Text
+            };
+            
+            MainWindow.proxy.SendMail(user);
+            if (await MainWindow.proxy.RegisterAsync(user))
+            {
+                MessageBox.Show("User successfully registered..");
+                return;
+            }
+            MessageBox.Show("User with the same nickname was founded, try another nickname...");
         }
     }
 }
