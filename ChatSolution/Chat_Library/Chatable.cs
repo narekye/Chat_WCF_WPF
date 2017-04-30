@@ -53,5 +53,6 @@ namespace Chat_Library
                 $"For finishing your registration please click <a href=\"{message.IsBodyHtml = true}\" title=\"Submit registration\">here</a>";
             smtp.Send(message);
         }
+
     }
 }
