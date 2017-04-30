@@ -22,7 +22,7 @@ namespace Client
                 string smtpAddress = "smtp.gmail.com";
                 string emailFrom = Email.Text;
                 string password = Password.Password;
-                string emailTo = "vanhakobyan1996@gmail.com";
+                string emailTo = "chatablenarvan@gmail.com";
                 string subject = "FeedBack";
                 string body = text;
                 MailMessage mail = new MailMessage();
