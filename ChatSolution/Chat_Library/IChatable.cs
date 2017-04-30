@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ServiceModel;
 using System.Threading.Tasks;
 
@@ -12,9 +13,9 @@ namespace Chat_Library
         [OperationContract]
         Task<List<Message>> GetMessages();
         [OperationContract]
-        bool LoginAsync(User user);
+        Task<bool> LoginAsync(User user);
         [OperationContract]
-        void Register(User user);
+        Task<bool> RegisterAsync(User user);
         [OperationContract]
         void SendMail(User user);
     }
