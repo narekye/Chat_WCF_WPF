@@ -6,7 +6,7 @@ namespace Client
 { 
     public partial class Login
     {
-        private static User user;
+        private static User us;
         private static ChatableClient chat = MainWindow.proxy;
         public Login()
         {
@@ -25,15 +25,17 @@ namespace Client
                 MessageBox.Show($"Hello {Login_.Text} - a pleasant pastime");
             }
 
-            user = new User()
+            us = new User()
             {
                 NickName = Login_.Text,
                 UserPassword = Password.Password
             };
-            var d = chat.LoginAsync(user);
+            var d = chat.LoginAsync(us);
             if (d)
-                MainWindow.user = user;
-            MessageBox.Show("Good...");
+            {
+                MainWindow.user = us;
+                MessageBox.Show("Good...");
+            }
             this.Close();
         }
 
