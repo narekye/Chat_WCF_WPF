@@ -16,6 +16,11 @@ namespace Client
 
         private void Send_Message(object sender, RoutedEventArgs e)
         {
+            if (ReferenceEquals(user, null))
+            {
+                MessageBox.Show("You must logged in at first...");
+                return;
+            }
             Message msg = new Message()
             {
                 MessageContent = message.Text
@@ -39,7 +44,7 @@ namespace Client
 
         private void Reg_of_Show(object sender, RoutedEventArgs e) => new Registration().Show();
         private void Sign_of_Show(object sender, RoutedEventArgs e) => new Login().Show();
-      
+
 
         private void Out_of_Show(object sender, RoutedEventArgs e)
         {
@@ -69,6 +74,6 @@ namespace Client
         }
 
         private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
-      
+
     }
 }
