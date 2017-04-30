@@ -16,6 +16,7 @@ namespace Client
 
         private void Send_Message(object sender, RoutedEventArgs e)
         {
+         
             if (ReferenceEquals(user, null))
             {
                 MessageBox.Show("You must logged in at first...");
@@ -39,6 +40,7 @@ namespace Client
                 return;
             }
             {
+                
                 signin.IsEnabled = false;
                 SignOUT.IsEnabled = true;
                 reg.IsEnabled = false;

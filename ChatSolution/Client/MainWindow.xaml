@@ -23,9 +23,9 @@
         </StackPanel>
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="signin" Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
-                <Button x:Name="SignOUT" Content="Sign Out" Margin="5" Click="Out_of_Show" Width="78" IsEnabled="False"></Button>
-                <Button x:Name="reg" Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
+                <Button Name="signin" Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
+                <Button Name="SignOUT" Content="Sign Out" Margin="5" Click="Out_of_Show" Width="78" IsEnabled="False"></Button>
+                <Button Name="reg" Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
             </StackPanel>
             <Grid>
                 <ListBox x:Name="listBox" Margin="10,5,90,5" Height="170"/>
