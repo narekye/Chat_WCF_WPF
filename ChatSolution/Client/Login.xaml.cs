@@ -11,14 +11,16 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Client.Chat;
 
 namespace Client
 {
     /// <summary>
     /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Login
     {
+        private static User user;
         public Login()
         {
             InitializeComponent();
@@ -36,7 +38,8 @@ namespace Client
             {
                 MessageBox.Show($"Hello {Login_.Text} - a pleasant pastime");
             }
-
         }
+
+
     }
 }

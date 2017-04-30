@@ -7,6 +7,7 @@ namespace Client
     public partial class MainWindow
     {
         ChatableClient proxy = new ChatableClient();
+        private static User user;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,11 +43,5 @@ namespace Client
         {
 
         }
-
-
-
-
-
-
     }
 }
