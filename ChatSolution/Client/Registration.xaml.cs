@@ -12,6 +12,10 @@ namespace Client
 
         private async void Register_Click(object sender, RoutedEventArgs e)
         {
+            if (Username.Text == null && (Password.Text == null || Password.Text.Length < 6) && Nickname == null )
+            {
+                MessageBox.Show("Input correctly Credential \nPassword must by more than 6 symbol !!!");
+            }
             User user = new User
             {
                 NickName = Nickname.Text,

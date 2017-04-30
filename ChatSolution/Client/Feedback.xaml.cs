@@ -16,6 +16,11 @@ namespace Client
 
         private async void SendFeedback_Click(object sender, RoutedEventArgs e)
         {
+
+            if ((Email.Text==null || !Email.Text.Contains("@") && Password.Password.Length<6 && Text.Text==null))
+            {
+                MessageBox.Show("Please input correct credential !!!");
+            }
             await Task.Run(() =>
             {
                 string text = Text.Text;
@@ -48,12 +53,15 @@ namespace Client
             });
         }
 
-        private void Password_KeyDown(object sender, KeyEventArgs e)
+        private async void Send_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            await Task.Run(() =>
             {
-                SendFeedback_Click(null, null);
-            }
+                if (e.Key == Key.Enter)
+                {
+                    SendFeedback_Click(null, null);
+                }
+            });
         }
 
 
