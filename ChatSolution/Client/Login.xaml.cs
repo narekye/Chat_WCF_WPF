@@ -2,10 +2,7 @@
 using Client.Chat;
 
 namespace Client
-{
-    /// <summary>
-    /// Interaction logic for Login.xaml
-    /// </summary>
+{ 
     public partial class Login
     {
         private static User user;
@@ -35,7 +32,7 @@ namespace Client
             var d = chat.LoginAsync(user);
             if (d)
                 MainWindow.user = user;
-            MessageBox.Show("Apres");
+            MessageBox.Show("Good...");
             this.Close();
         }
     }

@@ -7,7 +7,8 @@ namespace Client
 {
     public partial class MainWindow
     {
-        ChatableClient proxy = new ChatableClient();
+        public static User user;
+        public static ChatableClient proxy = new ChatableClient();
         public MainWindow()
         {
             InitializeComponent();
@@ -17,7 +18,6 @@ namespace Client
         {
             Message msg = new Message()
             {
-                
                 MessageContent = message.Text
             };
             proxy.Send(msg);
