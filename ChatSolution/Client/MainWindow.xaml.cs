@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Windows;
 using Client.Chat;
+using System.Diagnostics;
 
 namespace Client
 {
     public partial class MainWindow
     {
-        public static ChatableClient proxy = new ChatableClient();
-        public static User user;
+        ChatableClient proxy = new ChatableClient();
         public MainWindow()
         {
             InitializeComponent();
@@ -15,18 +15,13 @@ namespace Client
 
         private void Send_Message(object sender, RoutedEventArgs e)
         {
-            if (user == null)
-            {
-                MessageBox.Show("You not signed in !!!");
-                return;
-            }
             Message msg = new Message()
             {
+                
                 MessageContent = message.Text
             };
             proxy.Send(msg);
             Refresh_Block(null, null);
-            Label.Text = user.NickName;
         }
         private async void Refresh_Block(object sender, EventArgs e)
         {
@@ -46,8 +41,28 @@ namespace Client
         private void Sign_of_Show(object sender, RoutedEventArgs e) => new Login().Show();
         private void Out_of_Show(object sender, RoutedEventArgs e)
         {
-            user = null;
-            MessageBox.Show("You have successfully signed out !!!");
+
+        }
+
+        private void NarGithub_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/narekye");
+        }
+
+        private void VanGithub_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/vanhakobyan");
+
+        }
+
+        private void NarFB_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/yegoryan.narek");
+        }
+
+        private void VanFB_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/VANHAKOBYAN");
         }
     }
 }
