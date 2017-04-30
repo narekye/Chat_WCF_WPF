@@ -1,0 +1,26 @@
+﻿<Window x:Class="Client.Feedback"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Feedback" Height="300" Width="300">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images/Feedback.jpg"></ImageBrush>
+    </Window.Background>
+    <Grid>
+
+        <StackPanel>
+            <Label x:Name="mail" Content="E-mail" FontFamily="Segoe Print" FontWeight="Bold"   TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"></Label>
+            <TextBox x:Name="Email" Width="100" Height="20"  Background="#FFF6F6F6" Margin="2" RenderTransformOrigin="0.538,-0.447" />
+            <Label x:Name="label1" Content="Password" FontFamily="Ravie" TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"/>
+            <PasswordBox x:Name="Password" Margin="0 0 0 15" Width="100" Height="20" Background="#FFF0F0F0" KeyDown="Password_KeyDown" />
+            <Label x:Name="Feed" Content="Write your feedback" FontFamily="Ravie" TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"/>
+            <TextBox x:Name="Text" Height="80" Margin="29,0,29,15" ></TextBox>
+            <Button x:Name="SendFeedback" Content="Send Feedback" Margin="73,0" Click="SendFeedback_Click"></Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

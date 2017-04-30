@@ -39,6 +39,8 @@ namespace Client
 
         private void Reg_of_Show(object sender, RoutedEventArgs e) => new Registration().Show();
         private void Sign_of_Show(object sender, RoutedEventArgs e) => new Login().Show();
+      
+
         private void Out_of_Show(object sender, RoutedEventArgs e)
         {
             user = null;
@@ -66,9 +68,7 @@ namespace Client
             Process.Start("https://www.facebook.com/VANHAKOBYAN");
         }
 
-        private void Feedback_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
+      
     }
 }
