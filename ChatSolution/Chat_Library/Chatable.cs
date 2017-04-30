@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace Chat_Library
@@ -27,8 +30,8 @@ namespace Chat_Library
         public void Register(User user)
         {
             var member = (from u in db.Users
-                where u.NickName == user.NickName
-                select u).FirstOrDefaultAsync().Result;
+                          where u.NickName == user.NickName
+                          select u).FirstOrDefaultAsync().Result;
             if (ReferenceEquals(member, null))
             {
                 db.Users.Add(user);
@@ -37,10 +40,36 @@ namespace Chat_Library
         }
         public void SendMail(User user)
         {
-           // var Body =
-                // $"For finishing your registration please click <a href=\"{message.IsBodyHtml = true}\" title=\"Submit registration\">here</a>";
-           
+            string smtpAddress = "smtp.gmail.com";
+            int portNumber = 587;
+            bool enableSSL = true;
+            string emailFrom = "chatablenarvan@gmail.com";
+            string password = "CHAT2017";
+            string emailTo = user.Email;
+            MailMessage mail = new MailMessage();
+            string subject = "Finishing your registration";
+            string body = $"For finishing your registration please click <a href=\"{mail.IsBodyHtml = true}\" title=\"Submit registration\">here</a>";
+            mail.From = new MailAddress(emailFrom);
+            mail.To.Add(emailTo);
+            mail.Subject = subject;
+            mail.Body = body;
+            //mail.IsBodyHtml = true;
+            using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+            {
+                smtp.Credentials = new NetworkCredential(emailFrom, password);
+                smtp.EnableSsl = enableSSL;
+                try
+                {
+                    smtp.Send(mail);
+                    Console.WriteLine("Your FeedBack Successfully Sent\n \t Thank You");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Input Correct Gmail and/or Password");
+                }
+            }
         }
 
     }
+
 }
