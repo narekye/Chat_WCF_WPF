@@ -226,6 +226,12 @@ namespace Client.Chat {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/Register", ReplyAction="http://tempuri.org/IChatable/RegisterResponse")]
         System.Threading.Tasks.Task RegisterAsync(Client.Chat.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/SendMail", ReplyAction="http://tempuri.org/IChatable/SendMailResponse")]
+        void SendMail(Client.Chat.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/SendMail", ReplyAction="http://tempuri.org/IChatable/SendMailResponse")]
+        System.Threading.Tasks.Task SendMailAsync(Client.Chat.User user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -285,6 +291,14 @@ namespace Client.Chat {
         
         public System.Threading.Tasks.Task RegisterAsync(Client.Chat.User user) {
             return base.Channel.RegisterAsync(user);
+        }
+        
+        public void SendMail(Client.Chat.User user) {
+            base.Channel.SendMail(user);
+        }
+        
+        public System.Threading.Tasks.Task SendMailAsync(Client.Chat.User user) {
+            return base.Channel.SendMailAsync(user);
         }
     }
 }

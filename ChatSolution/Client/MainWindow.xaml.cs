@@ -16,7 +16,7 @@ namespace Client
         {
             Message msg = new Message()
             {
-                MessageSender = name.Text,
+                // MessageSender = name.Text,
                 MessageContent = message.Text
             };
             proxy.Send(msg);
@@ -43,7 +43,7 @@ namespace Client
 
         private void Label_TextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
-
+            
         }
     }
 }
