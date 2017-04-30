@@ -13,7 +13,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>
-          
+
             <ColumnDefinition Width="235"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
@@ -23,7 +23,7 @@
 
                 <Button Content="Send" Margin="5" Click="Send_Message" Width="61"></Button>
             </StackPanel>
-           <TextBlock x:Name="Label" Background="{x:Null}" Height="21" Margin="5,0,10,0" FontFamily="Script MT Bold" Foreground="White"/>
+            <TextBlock x:Name="Label" Background="{x:Null}" Height="21" Margin="5,0,10,0" FontFamily="Script MT Bold" Foreground="White"/>
 
         </StackPanel>
         <StackPanel Grid.Column="1">
@@ -32,15 +32,19 @@
                 <Button Content="Sign Out" Margin="5" Click="Out_of_Show" Width="78"></Button>
                 <Button Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
             </StackPanel>
-            <ListBox x:Name="listBox" Margin="5" Height="170"/>
-            <StackPanel Orientation="Horizontal">
+            <Grid>
+                <ListBox x:Name="listBox" Margin="10,5,90,5" Height="170"/>
+                <Button x:Name="Feedback" Content="Feedback" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top" Width="75" Click="Feedback_Click"/>
+            </Grid>
+
+            <StackPanel Margin="25 0 0 0 " Orientation="Horizontal">
                 <Button x:Name="NarGithub" Content="Narek GitHub" Margin="5" Width="80" Click="NarGithub_Click" ></Button>
-                <Button x:Name="NarFB" Content="Narek FaceBook" Margin="5" Click="NarFB_Click" ></Button>
+                <Button x:Name="NarFB" Content="Narek FaceBook" Margin="5" Click="NarFB_Click" Width="95" ></Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-              
+            <StackPanel Margin="25 0 0 0 " Orientation="Horizontal">
+
                 <Button x:Name="VanGithub" Content="Van GitHub" Margin="5" Width="80" Click="VanGithub_Click" ></Button>
-                <Button x:Name="VanFB" Content="Van FaceBook" Margin="5" Width="90" Click="VanFB_Click" ></Button>
+                <Button x:Name="VanFB" Content="Van FaceBook" Margin="5" Width="95" Click="VanFB_Click" ></Button>
 
             </StackPanel>
         </StackPanel>

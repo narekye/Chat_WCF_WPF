@@ -65,5 +65,10 @@ namespace Client
         {
             Process.Start("https://www.facebook.com/VANHAKOBYAN");
         }
+
+        private void Feedback_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
