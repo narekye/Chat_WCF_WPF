@@ -5,16 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-
         Title="Chat_Sample" Height="305.949" Width="525" ResizeMode="NoResize" Activated="MainWindow_OnActivated"  >
     <Window.Background>
-        <ImageBrush x:Name="img" ImageSource="Images\Image1.jpg" Stretch="UniformToFill"/>
+        <ImageBrush x:Name="img" ImageSource="C:\Users\ha.harutyunyan\Source\Repos\Chat_WCF_WPF\ChatSolution\Client\Images\Image1.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>
           
-            <ColumnDefinition Width="235"/>
+            <ColumnDefinition Width="220"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
             <TextBlock x:Name="res"  Height="200" Background="White" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
@@ -28,9 +27,8 @@
         </StackPanel>
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Sign In" Margin="5" Click="Form_of_Show" Width="51"></Button>
+                <Button Content="Sign In or Registration" Margin="5" Click="Form_of_Show"></Button>
                 <Button Content="Sign Out" Margin="5" Click="Form_of_Show" Width="78"></Button>
-                <Button Content="Registration" Margin="5" Click="Form_of_Show" Width="78"></Button>
 
             </StackPanel>
         </StackPanel>
