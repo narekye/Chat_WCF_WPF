@@ -41,7 +41,8 @@ namespace Client
         private void Sign_of_Show(object sender, RoutedEventArgs e) => new Login().Show();
         private void Out_of_Show(object sender, RoutedEventArgs e)
         {
-
+            user = null;
+            MessageBox.Show("You have successfully signed out...");
         }
 
         private void NarGithub_Click(object sender, RoutedEventArgs e)
