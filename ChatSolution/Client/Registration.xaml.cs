@@ -27,6 +27,7 @@ namespace Client
                 return;
             }
             MessageBox.Show("User with the same nickname was founded, try another nickname...");
+            Close();
         }
     }
 }

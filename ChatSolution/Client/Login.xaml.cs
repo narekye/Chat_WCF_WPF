@@ -28,6 +28,7 @@ namespace Client
             {
                 MainWindow.user = user;
                 MessageBox.Show("Logged in as: " + user.NickName);
+                Close();
                 return;
             }
             MessageBox.Show("UserName or password incorrect..");
