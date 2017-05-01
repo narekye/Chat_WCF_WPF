@@ -16,7 +16,6 @@
 
         private void Send_Message(object sender, RoutedEventArgs e)
         {
-         
             if (ReferenceEquals(user, null))
             {
                 MessageBox.Show("You must logged in at first...");
@@ -40,7 +39,7 @@
                 return;
             }
             {
-                
+
                 signin.IsEnabled = false;
                 SignOUT.IsEnabled = true;
                 reg.IsEnabled = false;
@@ -53,6 +52,7 @@
                 {
                     res.Text += message1.MessageSender + " : " + "\t" + message1.MessageContent + "\n";
                 }
+                RefreshUsers();
             });
             Label.Text = "Logged in as: " + user.NickName;
             message.Text = "TYPE YOUR MESSAGE HERE: ";
@@ -70,6 +70,7 @@
 
         private void Out_of_Show(object sender, RoutedEventArgs e)
         {
+            _proxy.RemoveFromList(user);
             user = null;
             MessageBox.Show("You have successfully signed out...");
             Label.Text = "";
@@ -89,6 +90,15 @@
         private void NarFB_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://www.facebook.com/yegoryan.narek");
+        }
+
+        private void RefreshUsers()
+        {
+            listBox.Text = "";
+            foreach (User us in _proxy.GetAllUsersAsync())
+            {
+                listBox.Text += us.UserId + ": " + us.UserName + "\t" + us.NickName + "\n";
+            }
         }
 
         private void VanFB_Click(object sender, RoutedEventArgs e)

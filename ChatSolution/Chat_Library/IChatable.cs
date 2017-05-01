@@ -17,5 +17,9 @@
         Task<bool> RegisterAsync(User user);
         [OperationContract]
         void SendMail(User user);
+        [OperationContract]
+        List<User> GetAllUsersAsync();
+        [OperationContract]
+        void RemoveFromList(User users);
     }
 }

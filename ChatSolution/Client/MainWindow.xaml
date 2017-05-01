@@ -28,7 +28,7 @@
                 <Button Name="reg" Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
             </StackPanel>
             <Grid>
-                <ListBox x:Name="listBox" Margin="10,5,90,5" Height="170"/>
+                <TextBox x:Name="listBox" Margin="10,5,90,5" Foreground="Coral" Height="170"/>
                 <Button x:Name="Feed" Content="Feedback" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Width="66" Click="Feed_Click"/>
             </Grid>
             <StackPanel Margin="25 0 0 0 " Orientation="Horizontal">

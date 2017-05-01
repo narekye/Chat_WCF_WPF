@@ -125,6 +125,9 @@
     <None Include="Service References\Chat\Client.Chat.Message.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Chat\Client.Chat.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Chat\service.wsdl" />
     <None Include="Service References\Chat\service.xsd">
       <SubType>Designer</SubType>

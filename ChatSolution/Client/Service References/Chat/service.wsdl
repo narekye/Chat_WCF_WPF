@@ -37,6 +37,18 @@
   <wsdl:message name="IChatable_SendMail_OutputMessage">
     <wsdl:part name="parameters" element="tns:SendMailResponse" />
   </wsdl:message>
+  <wsdl:message name="IChatable_GetAllUsersAsync_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersAsync" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_GetAllUsersAsync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_RemoveFromList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromList" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_RemoveFromList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromListResponse" />
+  </wsdl:message>
   <wsdl:portType name="IChatable">
     <wsdl:operation name="Send">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Send" message="tns:IChatable_Send_InputMessage" />
@@ -57,6 +69,14 @@
     <wsdl:operation name="SendMail">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/SendMail" message="tns:IChatable_SendMail_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatable/SendMailResponse" message="tns:IChatable_SendMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersAsync">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetAllUsersAsync" message="tns:IChatable_GetAllUsersAsync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetAllUsersAsyncResponse" message="tns:IChatable_GetAllUsersAsync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/RemoveFromList" message="tns:IChatable_RemoveFromList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/RemoveFromListResponse" message="tns:IChatable_RemoveFromList_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IChatable" type="tns:IChatable">
@@ -99,6 +119,24 @@
     </wsdl:operation>
     <wsdl:operation name="SendMail">
       <soap:operation soapAction="http://tempuri.org/IChatable/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersAsync">
+      <soap:operation soapAction="http://tempuri.org/IChatable/GetAllUsersAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromList">
+      <soap:operation soapAction="http://tempuri.org/IChatable/RemoveFromList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

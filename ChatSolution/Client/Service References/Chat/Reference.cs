@@ -248,6 +248,18 @@ namespace Client.Chat {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/SendMail", ReplyAction="http://tempuri.org/IChatable/SendMailResponse")]
         System.Threading.Tasks.Task SendMailAsync(Client.Chat.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllUsersAsync", ReplyAction="http://tempuri.org/IChatable/GetAllUsersAsyncResponse")]
+        Client.Chat.User[] GetAllUsersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllUsersAsync", ReplyAction="http://tempuri.org/IChatable/GetAllUsersAsyncResponse")]
+        System.Threading.Tasks.Task<Client.Chat.User[]> GetAllUsersAsyncAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/RemoveFromList", ReplyAction="http://tempuri.org/IChatable/RemoveFromListResponse")]
+        void RemoveFromList(Client.Chat.User users);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/RemoveFromList", ReplyAction="http://tempuri.org/IChatable/RemoveFromListResponse")]
+        System.Threading.Tasks.Task RemoveFromListAsync(Client.Chat.User users);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -315,6 +327,22 @@ namespace Client.Chat {
         
         public System.Threading.Tasks.Task SendMailAsync(Client.Chat.User user) {
             return base.Channel.SendMailAsync(user);
+        }
+        
+        public Client.Chat.User[] GetAllUsersAsync() {
+            return base.Channel.GetAllUsersAsync();
+        }
+        
+        public System.Threading.Tasks.Task<Client.Chat.User[]> GetAllUsersAsyncAsync() {
+            return base.Channel.GetAllUsersAsyncAsync();
+        }
+        
+        public void RemoveFromList(Client.Chat.User users) {
+            base.Channel.RemoveFromList(users);
+        }
+        
+        public System.Threading.Tasks.Task RemoveFromListAsync(Client.Chat.User users) {
+            return base.Channel.RemoveFromListAsync(users);
         }
     }
 }
