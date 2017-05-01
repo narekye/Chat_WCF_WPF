@@ -36,8 +36,10 @@
                 SignOUT.IsEnabled = false;
                 signin.IsEnabled = true;
                 reg.IsEnabled = true;
+                Label.Text = "";
                 return;
             }
+            else Label.Text = "Logged in as: " + user.NickName;
             {
                 signin.IsEnabled = false;
                 SignOUT.IsEnabled = true;
