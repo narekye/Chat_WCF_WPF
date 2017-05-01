@@ -31,7 +31,11 @@ namespace Client
         }
         private async void Refresh_Block(object sender, EventArgs e)
         {
-            if (ReferenceEquals(user, null)) return;
+            if (ReferenceEquals(user, null))
+            {
+                SignOUT.IsEnabled = false;
+                return;
+            }
             res.Text = "";
             var list = await proxy.GetMessagesAsync();
             Dispatcher.Invoke(() =>
