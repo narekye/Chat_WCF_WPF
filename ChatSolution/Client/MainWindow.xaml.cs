@@ -71,6 +71,8 @@
         {
             _proxy.RemoveFromList(user);
             user = null;
+            listBox.Items.Clear();
+            res.Text = "";
             MessageBox.Show("You have successfully signed out...");
             Label.Text = "";
         }
