@@ -15,7 +15,7 @@
             <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <TextBox x:Name="res" ForceCursor="False" Height="200" Background="White" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Margin="5 5 5 5" VerticalAlignment="Top" AllowDrop="True"></TextBox>
+            <TextBlock x:Name="res" ForceCursor="False" Height="200" AllowDrop="True" Background="White" TextWrapping="Wrap" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="message" Height="20" Background="{x:Null}" Margin="5" Foreground="Chartreuse" Width="196" ></TextBox>
                 <Button Content="Send" Margin="5" Click="Send_Message" Width="61"></Button>
@@ -29,8 +29,7 @@
                 <Button Name="signin" Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
                 <Button Name="SignOUT" Content="Sign Out" Margin="5" Click="Out_of_Show" Width="68" IsEnabled="False"></Button>
             </StackPanel>
-            <TextBox x:Name="listBox" Margin="10,5" Foreground="Coral" Height="170"/>
-
+            <ListBox x:Name="listBox" AllowDrop="True" Margin="10,5" Foreground="Coral" Height="170"/>
         </StackPanel>
 
         <StackPanel Grid.Column="2">
