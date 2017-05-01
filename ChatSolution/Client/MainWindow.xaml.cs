@@ -75,21 +75,6 @@
             Label.Text = "";
         }
         #region BTNCLICKS
-        private void NarGithub_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://github.com/narekye");
-        }
-
-        private void VanGithub_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://github.com/vanhakobyan");
-
-        }
-
-        private void NarFB_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://www.facebook.com/yegoryan.narek");
-        }
 
         private void RefreshUsers()
         {
@@ -99,12 +84,6 @@
                 listBox.Items.Add(": " + us.UserName + "\t" + us.NickName);
             }
         }
-
-        private void VanFB_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://www.facebook.com/VANHAKOBYAN");
-        }
-
         private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
 
         private void About_Click(object sender, RoutedEventArgs e) => new AboutWin().Show();
