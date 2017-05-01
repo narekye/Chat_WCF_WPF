@@ -39,7 +39,6 @@
                 return;
             }
             {
-
                 signin.IsEnabled = false;
                 SignOUT.IsEnabled = true;
                 reg.IsEnabled = false;
