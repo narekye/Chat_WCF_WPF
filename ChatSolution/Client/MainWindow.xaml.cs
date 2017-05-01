@@ -93,10 +93,10 @@
 
         private void RefreshUsers()
         {
-            listBox.Text = "";
+            listBox.Items.Clear();
             foreach (User us in _proxy.GetAllUsersAsync())
             {
-                listBox.Text += us.UserId + ": " + us.UserName + "\t" + us.NickName + "\n";
+                listBox.Items.Add(": " + us.UserName + "\t" + us.NickName);
             }
         }
 
