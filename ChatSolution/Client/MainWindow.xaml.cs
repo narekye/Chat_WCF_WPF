@@ -2,6 +2,7 @@
 using System.Windows;
 using Client.Chat;
 using System.Diagnostics;
+using System.Windows.Controls;
 
 namespace Client
 {
@@ -30,9 +31,9 @@ namespace Client
         }
         private async void Refresh_Block(object sender, EventArgs e)
         {
+            if (ReferenceEquals(user, null)) return;
             res.Text = "";
             var list = await proxy.GetMessagesAsync();
-
             Dispatcher.Invoke(() =>
             {
                 foreach (Message message in list)
@@ -40,13 +41,14 @@ namespace Client
                     res.Text += message.MessageSender + "\t" + message.MessageContent + "\n";
                 }
             });
+            Label.Text = user.NickName;
         }
 
         private void Reg_of_Show(object sender, RoutedEventArgs e) => new Registration().Show();
         private void Sign_of_Show(object sender, RoutedEventArgs e)
         {
             new Login().Show();
-            if (user!=null)
+            if (user != null)
             {
                 SignOUT.IsEnabled = true;
             }

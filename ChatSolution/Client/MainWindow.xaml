@@ -3,28 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-
-        Title="ChoiceChat" Height="310" Width="530" ResizeMode="CanMinimize"  >
+        Title="ChoiceChat" Height="310" Width="530" ResizeMode="CanMinimize" Activated="Refresh_Block">
     <Window.Background>
         <ImageBrush x:Name="img" ImageSource="Images\Image1.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>
-
             <ColumnDefinition Width="235"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <TextBlock x:Name="res"  Height="200" Background="White" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
+            <TextBox x:Name="res" ForceCursor="False" Height="200" Background="White" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Margin="5 5 5 5" VerticalAlignment="Top" AllowDrop="True"></TextBox>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="message" Height="20" Background="{x:Null}" Margin="5" Foreground="Chartreuse" Width="196" ></TextBox>
-
                 <Button Content="Send" Margin="5" Click="Send_Message" Width="61"></Button>
             </StackPanel>
             <TextBlock x:Name="Label" Background="{x:Null}" Height="21" Margin="5,0,10,0" FontFamily="Script MT Bold" Foreground="White"/>
-
         </StackPanel>
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
@@ -35,18 +30,14 @@
             <Grid>
                 <ListBox x:Name="listBox" Margin="10,5,90,5" Height="170"/>
                 <Button x:Name="Feed" Content="Feedback" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Width="66" Click="Feed_Click"/>
-
             </Grid>
-
             <StackPanel Margin="25 0 0 0 " Orientation="Horizontal">
                 <Button x:Name="NarGithub" Content="Narek GitHub" Margin="5" Width="80" Click="NarGithub_Click" ></Button>
                 <Button x:Name="NarFB" Content="Narek FaceBook" Margin="5" Click="NarFB_Click" Width="95" ></Button>
             </StackPanel>
             <StackPanel Margin="25 0 0 0 " Orientation="Horizontal">
-
                 <Button x:Name="VanGithub" Content="Van GitHub" Margin="5" Width="80" Click="VanGithub_Click" ></Button>
                 <Button x:Name="VanFB" Content="Van FaceBook" Margin="5" Width="95" Click="VanFB_Click" ></Button>
-
             </StackPanel>
         </StackPanel>
     </Grid>

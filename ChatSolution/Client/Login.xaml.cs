@@ -16,7 +16,7 @@ namespace Client
         private async void button_Click(object sender, RoutedEventArgs e)
         {
             if ((Login_.Text == string.Empty && Password.Password == string.Empty) || (Password.Password.Length <= 6 && Password.Password.Length >= 15))
-               MessageBox.Show("Please correctly enter the Login or password..");
+                MessageBox.Show("Please correctly enter the Login or password..");
             else
                 MessageBox.Show($"Hello {Login_.Text} - a pleasant pastime...");
             user = new User()
