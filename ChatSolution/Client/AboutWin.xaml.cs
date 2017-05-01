@@ -46,5 +46,10 @@ namespace Client
         {
             Process.Start("https://www.facebook.com/VANHAKOBYAN");
         }
+
+        private void MainBrowser_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainBrowser.Navigate("https://github.com/narekye/Chat_WCF_WPF");
+        }
     }
 }

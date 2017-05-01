@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="ChoiceChat" Height="310" Width="535" ResizeMode="CanMinimize" Activated="Refresh_Block">
+        Title="ChoiceChat" Height="310" Width="635" ResizeMode="CanMinimize" Activated="Refresh_Block">
     <Window.Background>
         <ImageBrush x:Name="img" ImageSource="Images\Image1.jpg" Stretch="UniformToFill"/>
     </Window.Background>
@@ -12,7 +12,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>
             <ColumnDefinition Width="145"/>
-            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="195"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
             <TextBlock x:Name="res" ForceCursor="False" Height="200" AllowDrop="True" Background="White" TextWrapping="Wrap" Margin="5 5 5 5" VerticalAlignment="Top"></TextBlock>
@@ -23,20 +23,21 @@
             <TextBlock x:Name="Label" Background="{x:Null}" Height="21" Margin="5,0,10,0" FontFamily="Script MT Bold" Foreground="White"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Orientation="Vertical" >
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="0,0,0,10" >
 
             <StackPanel Orientation="Horizontal">
-                <Button Name="signin" Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
-                <Button Name="SignOUT" Content="Sign Out" Margin="5" Click="Out_of_Show" Width="68" IsEnabled="False"></Button>
+                <Button Name="signin" Content="Sign In" Margin="10 5 5 5 " Click="Sign_of_Show" Width="51"></Button>
+                <Button Name="SignOUT" Content="Sign Out" Margin="5" Click="Out_of_Show" Width="63" IsEnabled="False"></Button>
             </StackPanel>
-            <ListBox x:Name="listBox" AllowDrop="True" Margin="10,5" Foreground="Coral" Height="232"/>
+            <TextBlock x:Name="Online" Text="Online Users" FontFamily="Kristen ITC" TextAlignment="Center" FontSize="15" Foreground="#FF0086FF"></TextBlock>
+            <ListBox x:Name="listBox" AllowDrop="True" Margin="10,5" Foreground="Coral" Height="211"/>
         </StackPanel>
 
         <StackPanel Grid.Column="2">
-            <Button Name="reg" Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
-
-            <Button x:Name="About" Content="About" Margin="12,185,8,5" Click="About_Click"></Button>
-            <Button x:Name="Feed" Content="Feedback" HorizontalAlignment="Left" Margin="12,5,0,100" VerticalAlignment="Top" Width="76" Click="Feed_Click"/>
+            <Button Name="reg" Content="Registration" Margin="10,5" Click="Reg_of_Show"/>
+            <Calendar />
+            <Button x:Name="About" Content="About Authors" Margin="10,10,10,5" Click="About_Click"></Button>
+            <Button x:Name="Feed" Content="Feedback" HorizontalAlignment="Left" Margin="10,5,0,100" VerticalAlignment="Top" Width="176" Click="Feed_Click"/>
 
         </StackPanel>
 
