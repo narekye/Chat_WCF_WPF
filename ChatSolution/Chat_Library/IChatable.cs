@@ -20,6 +20,8 @@
         [OperationContract]
         List<User> GetAllUsersAsync();
         [OperationContract]
+        Task<List<User>> GetAllUsersAsyncFromDb();
+        [OperationContract]
         void RemoveFromList(User users);
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace Client
 {
+    using System;
     using System.Windows;
     using Chat;
     using System.Windows.Input;
@@ -38,6 +39,15 @@
             if (e.Key == Key.Enter)
             {
                 button_Click(null, null);
+            }
+        }
+
+        private async void ComboBox(object sender, EventArgs e)
+        {
+            var list = await chat.GetAllUsersAsyncFromDbAsync();
+            foreach (User user1 in list)
+            {
+                Login_.Items.Add(user1.NickName);
             }
         }
     }

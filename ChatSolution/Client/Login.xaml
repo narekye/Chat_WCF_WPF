@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="Login" Height="300" Width="300"  ResizeMode="CanMinimize">
+        Title="Login" Height="300" Width="300"  ResizeMode="CanMinimize" Activated="ComboBox">
     <Window.Background>
         <ImageBrush x:Name="SignIn" ImageSource="Images\Login.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <StackPanel>
             <Label x:Name="label" Content="Login" HorizontalAlignment="Center" FontFamily="Ravie" FontSize="14" Foreground="#FF0DCDF7"/>
-            <TextBox Width="100" Name="Login_" Height="20" Background="#FFF6F6F6" Margin="2" RenderTransformOrigin="0.538,-0.447" />
+            <ComboBox Width="100" Name="Login_" Height="20"  Background="#FFF6F6F6" Margin="2" RenderTransformOrigin="0.538,-0.447" />
             <Label x:Name="label1" Content="Password" FontFamily="Ravie" TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center" Foreground="#FFE8FEFF"/>
             <PasswordBox x:Name="Password" Width="100" Height="20" Background="#FFF0F0F0" Margin="0 0 0 0" KeyDown="Password_KeyDown" />
             <CheckBox x:Name="Stay" Content="Stay" HorizontalAlignment="Center" Margin="10" FontFamily="Ravie"  Foreground="#FF00B4FF"/>
