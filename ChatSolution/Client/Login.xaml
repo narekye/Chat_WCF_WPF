@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="Login" Height="300" Width="300" ResizeMode="NoResize">
+        Title="Login" Height="300" Width="300"  ResizeMode="CanMinimize">
     <Window.Background>
         <ImageBrush x:Name="SignIn" ImageSource="Images\Login.jpg" Stretch="UniformToFill"/>
     </Window.Background>

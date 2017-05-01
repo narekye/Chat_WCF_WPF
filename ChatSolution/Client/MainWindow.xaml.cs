@@ -104,12 +104,10 @@
         {
             Process.Start("https://www.facebook.com/VANHAKOBYAN");
         }
-        #endregion
+
         private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
 
-        private void About_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void About_Click(object sender, RoutedEventArgs e) => new AboutWin().Show();
+        #endregion
     }
 }
