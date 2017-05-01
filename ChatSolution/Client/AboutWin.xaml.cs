@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,28 @@ namespace Client
         public AboutWin()
         {
             InitializeComponent();
+        }
+        private void NarGithub_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/narekye");
+        }
+
+        private void VanGithub_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/vanhakobyan");
+
+        }
+
+        private void NarFB_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/yegoryan.narek");
+        }
+
+
+
+        private void VanFB_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/VANHAKOBYAN");
         }
     }
 }
