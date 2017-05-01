@@ -16,7 +16,6 @@ namespace Client
 
         private async void SendFeedback_Click(object sender, RoutedEventArgs e)
         {
-
             if ((Email.Text==null || !Email.Text.Contains("@") && Password.Password.Length<6 && Text.Text==null))
             {
                 MessageBox.Show("Please input correct credential !!!");
@@ -63,7 +62,5 @@ namespace Client
                 }
             });
         }
-
-
     }
 }
