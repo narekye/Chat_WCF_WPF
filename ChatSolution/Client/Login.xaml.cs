@@ -44,6 +44,7 @@
 
         private async void ComboBox(object sender, EventArgs e)
         {
+            Login_.Items.Clear();
             var list = await chat.GetAllUsersAsyncFromDbAsync();
             foreach (User user1 in list)
             {
