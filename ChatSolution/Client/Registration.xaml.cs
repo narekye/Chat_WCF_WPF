@@ -20,10 +20,11 @@ namespace Client
                 UserPassword = Password.Text
             };
             
-            MainWindow.proxy.SendMail(user);
-            if (await MainWindow.proxy.RegisterAsync(user))
+            MainWindow._proxy.SendMail(user);
+            if (await MainWindow._proxy.RegisterAsync(user))
             {
                 MessageBox.Show("User successfully registered..");
+                Close();
                 return;
             }
             MessageBox.Show("User with the same nickname was founded, try another nickname...");
