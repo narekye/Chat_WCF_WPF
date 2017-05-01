@@ -49,13 +49,11 @@
             return connectedUsers;
         }
 
-        /// <inheritdoc />
         public async Task<List<User>> GetAllUsersAsyncFromDb()
         {
             return await _db.Users.ToListAsync();
         }
 
-        /// <inheritdoc />
         public void RemoveFromList(User user)
         {
             var us = connectedUsers.FindLast(p => p.NickName == user.NickName);

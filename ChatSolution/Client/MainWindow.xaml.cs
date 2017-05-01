@@ -3,7 +3,6 @@
     using System;
     using System.Windows;
     using Chat;
-    using System.Diagnostics;
 
     public partial class MainWindow
     {
