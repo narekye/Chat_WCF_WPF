@@ -1,9 +1,9 @@
-﻿using System.Windows;
-using Client.Chat;
-using System.Windows.Input;
-
-namespace Client
+﻿namespace Client
 {
+    using System.Windows;
+    using Chat;
+    using System.Windows.Input;
+
     public partial class Login
     {
         private static User user;

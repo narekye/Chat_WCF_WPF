@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ServiceModel;
-using System.Threading.Tasks;
-
-namespace Chat_Library
+﻿namespace Chat_Library
 {
+    using System.Collections.Generic;
+    using System.ServiceModel;
+    using System.Threading.Tasks;
+
     [ServiceContract]
     public interface IChatable
     {

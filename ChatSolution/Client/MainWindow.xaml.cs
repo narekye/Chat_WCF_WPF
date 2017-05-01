@@ -1,10 +1,10 @@
-﻿using System;
-using System.Windows;
-using Client.Chat;
-using System.Diagnostics;
-
-namespace Client
+﻿namespace Client
 {
+    using System;
+    using System.Windows;
+    using Chat;
+    using System.Diagnostics;
+
     public partial class MainWindow
     {
         public static User user;
@@ -95,6 +95,5 @@ namespace Client
         }
         #endregion
         private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
-
     }
 }

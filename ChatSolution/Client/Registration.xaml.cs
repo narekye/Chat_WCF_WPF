@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using Client.Chat;
-
-namespace Client
+﻿namespace Client
 {
+    using System.Windows;
+    using Chat;
+
     public partial class Registration
     {
         public Registration()

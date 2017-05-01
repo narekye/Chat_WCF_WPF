@@ -1,12 +1,12 @@
-﻿using System;
-using System.Net;
-using System.Net.Mail;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
-
-namespace Client
+﻿namespace Client
 {
+    using System;
+    using System.Net;
+    using System.Net.Mail;
+    using System.Threading.Tasks;
+    using System.Windows;
+    using System.Windows.Input;
+
     public partial class Feedback
     {
         public Feedback()
@@ -16,7 +16,7 @@ namespace Client
 
         private async void SendFeedback_Click(object sender, RoutedEventArgs e)
         {
-            if ((Email.Text==null || !Email.Text.Contains("@") && Password.Password.Length<6 && Text.Text==null))
+            if ((Email.Text == null || !Email.Text.Contains("@") && Password.Password.Length < 6 && Text.Text == null))
             {
                 MessageBox.Show("Please input correct credential !!!");
             }
@@ -51,7 +51,6 @@ namespace Client
                 }
             });
         }
-
         private async void Send_KeyDown(object sender, KeyEventArgs e)
         {
             await Task.Run(() =>
