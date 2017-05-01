@@ -24,6 +24,7 @@ namespace Client
             }
             Message msg = new Message()
             {
+                MessageSender = user.NickName,
                 MessageContent = message.Text
             };
             proxy.Send(msg);
@@ -40,12 +41,13 @@ namespace Client
             var list = await proxy.GetMessagesAsync();
             Dispatcher.Invoke(() =>
             {
-                foreach (Message message in list)
+                foreach (Message message1 in list)
                 {
-                    res.Text += message.MessageSender + "\t" + message.MessageContent + "\n";
+                    res.Text += message1.MessageSender + ": " + "\t" + message1.MessageContent + "\n";
                 }
             });
-            Label.Text = user.NickName;
+            Label.Text = "Logged in as: " + user.NickName;
+            message.Text = "TYPE YOUR MESSAGE HERE: ";
         }
 
         private void Reg_of_Show(object sender, RoutedEventArgs e) => new Registration().Show();
