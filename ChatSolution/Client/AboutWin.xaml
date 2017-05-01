@@ -5,17 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="AboutWin" Height="300" Width="439.023"
-        ResizeMode="CanMinimize">
+        Title="About Authors" Height="500" Width="700"
+        MinHeight="500"
+        MinWidth="700"
+        ResizeMode="CanResize">
+    <Window.Background>
+        <ImageBrush ImageSource="Images\About.jpg"></ImageBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions >
             <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Margin="5,5,0,5" Orientation="Horizontal">
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="5,5,0,5" Orientation="Horizontal">
             <Button x:Name="NarGithub" Content="Narek GitHub" Margin="5" Click="NarGithub_Click" Width="92" ></Button>
             <Button x:Name="VanGithub" Content="Van GitHub"  Margin="5" Click="VanGithub_Click" Width="83" ></Button>
             <Button x:Name="VanFB" Content="Van FaceBook"  Margin="5" Click="VanFB_Click" Width="98" ></Button>
             <Button x:Name="NarFB" Content="Narek FaceBook"  Margin="5" Click="NarFB_Click" Width="97" ></Button>
         </StackPanel>
+    
+        <WebBrowser Grid.Row="1" x:Name="MainBrowser" Loaded="MainBrowser_Loaded" Margin="0,10,0,27"/>
+
     </Grid>
 </Window>
