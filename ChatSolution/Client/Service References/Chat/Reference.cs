@@ -255,6 +255,12 @@ namespace Client.Chat {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllUsersAsync", ReplyAction="http://tempuri.org/IChatable/GetAllUsersAsyncResponse")]
         System.Threading.Tasks.Task<Client.Chat.User[]> GetAllUsersAsyncAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllUsersAsyncFromDb", ReplyAction="http://tempuri.org/IChatable/GetAllUsersAsyncFromDbResponse")]
+        Client.Chat.User[] GetAllUsersAsyncFromDb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllUsersAsyncFromDb", ReplyAction="http://tempuri.org/IChatable/GetAllUsersAsyncFromDbResponse")]
+        System.Threading.Tasks.Task<Client.Chat.User[]> GetAllUsersAsyncFromDbAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/RemoveFromList", ReplyAction="http://tempuri.org/IChatable/RemoveFromListResponse")]
         void RemoveFromList(Client.Chat.User users);
         
@@ -335,6 +341,14 @@ namespace Client.Chat {
         
         public System.Threading.Tasks.Task<Client.Chat.User[]> GetAllUsersAsyncAsync() {
             return base.Channel.GetAllUsersAsyncAsync();
+        }
+        
+        public Client.Chat.User[] GetAllUsersAsyncFromDb() {
+            return base.Channel.GetAllUsersAsyncFromDb();
+        }
+        
+        public System.Threading.Tasks.Task<Client.Chat.User[]> GetAllUsersAsyncFromDbAsync() {
+            return base.Channel.GetAllUsersAsyncFromDbAsync();
         }
         
         public void RemoveFromList(Client.Chat.User users) {

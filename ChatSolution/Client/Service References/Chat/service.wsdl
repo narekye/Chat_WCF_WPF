@@ -43,6 +43,12 @@
   <wsdl:message name="IChatable_GetAllUsersAsync_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllUsersAsyncResponse" />
   </wsdl:message>
+  <wsdl:message name="IChatable_GetAllUsersAsyncFromDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersAsyncFromDb" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_GetAllUsersAsyncFromDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersAsyncFromDbResponse" />
+  </wsdl:message>
   <wsdl:message name="IChatable_RemoveFromList_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveFromList" />
   </wsdl:message>
@@ -73,6 +79,10 @@
     <wsdl:operation name="GetAllUsersAsync">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetAllUsersAsync" message="tns:IChatable_GetAllUsersAsync_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetAllUsersAsyncResponse" message="tns:IChatable_GetAllUsersAsync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersAsyncFromDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetAllUsersAsyncFromDb" message="tns:IChatable_GetAllUsersAsyncFromDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetAllUsersAsyncFromDbResponse" message="tns:IChatable_GetAllUsersAsyncFromDb_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoveFromList">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/RemoveFromList" message="tns:IChatable_RemoveFromList_InputMessage" />
@@ -128,6 +138,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllUsersAsync">
       <soap:operation soapAction="http://tempuri.org/IChatable/GetAllUsersAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersAsyncFromDb">
+      <soap:operation soapAction="http://tempuri.org/IChatable/GetAllUsersAsyncFromDb" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
