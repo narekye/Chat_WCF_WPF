@@ -61,7 +61,7 @@
         private void Sign_of_Show(object sender, RoutedEventArgs e)
         {
             new Login().Show();
-            if (user != null)
+            if (!ReferenceEquals(user, null))
             {
                 SignOUT.IsEnabled = true;
             }

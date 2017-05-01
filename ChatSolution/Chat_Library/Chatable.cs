@@ -49,6 +49,7 @@
             return connectedUsers;
         }
 
+        /// <inheritdoc />
         public void RemoveFromList(User user)
         {
             var us = connectedUsers.FindLast(p => p.NickName == user.NickName);
