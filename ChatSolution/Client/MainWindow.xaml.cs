@@ -106,5 +106,10 @@
         }
         #endregion
         private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

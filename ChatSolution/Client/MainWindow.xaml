@@ -11,7 +11,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>
-            <ColumnDefinition Width="235"/>
+            <ColumnDefinition Width="135"/>
+            <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
             <TextBox x:Name="res" ForceCursor="False" Height="200" Background="White" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Margin="5 5 5 5" VerticalAlignment="Top" AllowDrop="True"></TextBox>
@@ -21,24 +22,28 @@
             </StackPanel>
             <TextBlock x:Name="Label" Background="{x:Null}" Height="21" Margin="5,0,10,0" FontFamily="Script MT Bold" Foreground="White"/>
         </StackPanel>
-        <StackPanel Grid.Column="1">
+
+        <StackPanel Grid.Column="1" Orientation="Vertical" >
+
             <StackPanel Orientation="Horizontal">
                 <Button Name="signin" Content="Sign In" Margin="5" Click="Sign_of_Show" Width="51"></Button>
-                <Button Name="SignOUT" Content="Sign Out" Margin="5" Click="Out_of_Show" Width="78" IsEnabled="False"></Button>
-                <Button Name="reg" Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
+                <Button Name="SignOUT" Content="Sign Out" Margin="5" Click="Out_of_Show" Width="68" IsEnabled="False"></Button>
             </StackPanel>
-            <Grid>
-                <TextBox x:Name="listBox" Margin="10,5,90,5" Foreground="Coral" Height="170"/>
-                <Button x:Name="Feed" Content="Feedback" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Width="66" Click="Feed_Click"/>
-            </Grid>
-            <StackPanel Margin="25 0 0 0 " Orientation="Horizontal">
-                <Button x:Name="NarGithub" Content="Narek GitHub" Margin="5" Width="80" Click="NarGithub_Click" ></Button>
-                <Button x:Name="NarFB" Content="Narek FaceBook" Margin="5" Click="NarFB_Click" Width="95" ></Button>
-            </StackPanel>
-            <StackPanel Margin="25 0 0 0 " Orientation="Horizontal">
-                <Button x:Name="VanGithub" Content="Van GitHub" Margin="5" Width="80" Click="VanGithub_Click" ></Button>
-                <Button x:Name="VanFB" Content="Van FaceBook" Margin="5" Width="95" Click="VanFB_Click" ></Button>
-            </StackPanel>
+            <TextBox x:Name="listBox" Margin="10,5" Foreground="Coral" Height="170"/>
+
         </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <Button Name="reg" Content="Registration" Margin="5" Click="Reg_of_Show" Width="76"></Button>
+
+            <Button x:Name="NarGithub" Content="Narek GitHub" Margin="5" Width="80" Click="NarGithub_Click" ></Button>
+            <Button x:Name="VanGithub" Content="Van GitHub" Margin="5" Width="80" Click="VanGithub_Click" ></Button>
+            <Button x:Name="NarFB" Content="Narek FaceBook" Margin="5" Click="NarFB_Click" Width="95" ></Button>
+            <Button x:Name="VanFB" Content="Van FaceBook" Margin="5" Width="95" Click="VanFB_Click" ></Button>
+            <Button x:Name="About" Content="About" Margin="20,70,13,5" Click="About_Click"></Button>
+            <Button x:Name="Feed" Content="Feedback" HorizontalAlignment="Left" Margin="20,5,0,100" VerticalAlignment="Top" Width="71" Click="Feed_Click"/>
+
+        </StackPanel>
+
     </Grid>
 </Window>
