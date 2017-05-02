@@ -16,8 +16,12 @@
 
         private async void button_Click(object sender, RoutedEventArgs e)
         {
-            if ((Login_.Text == string.Empty && Password.Password == string.Empty) || (Password.Password.Length <= 6 && Password.Password.Length >= 15))
+            if ((Login_.Text == null || Login_.Text == string.Empty)
+                && (Password.Password == null || Password.Password == string.Empty)
+                || (Password.Password.Length <= 6 && Password.Password.Length >= 15))
+            {
                 MessageBox.Show("Please correctly enter the Login or password..");
+            }
             user = new User()
             {
                 NickName = Login_.Text,
@@ -30,7 +34,7 @@
                 Close();
                 return;
             }
-            MessageBox.Show("UserName or password incorrect..");
+            MessageBox.Show("UserName or password incorrect.../nPlease correctly enter !!!");
             Close();
         }
 
