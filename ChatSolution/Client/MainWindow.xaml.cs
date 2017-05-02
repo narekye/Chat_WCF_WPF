@@ -55,7 +55,7 @@
                 RefreshUsers();
             });
             Label.Text = "Logged in as: " + user.NickName;
-            message.Text = "TYPE YOUR MESSAGE HERE: ";
+            message.Text = "Type Your Message Here: ";
         }
 
         private void Reg_of_Show(object sender, RoutedEventArgs e) => new Registration().Show();
