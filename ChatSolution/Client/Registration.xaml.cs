@@ -12,7 +12,7 @@
 
         private async void Register_Click(object sender, RoutedEventArgs e)
         {
-            if (Username.Text == null && (Password.Text == null || Password.Text.Length < 6) && Nickname == null )
+            if ((Username.Text == null || Username.Text.Length < 3) && (Password.Text == null || Password.Text.Length < 6) && Nickname == null )
             {
                 MessageBox.Show("Input correctly Credential \nPassword must by more than 6 symbol !!!");
             }
@@ -27,7 +27,7 @@
             MainWindow._proxy.SendMail(user);
             if (await MainWindow._proxy.RegisterAsync(user))
             {
-                MessageBox.Show("User successfully registered..");
+                MessageBox.Show("User successfully registered...");
                 Close();
                 return;
             }
