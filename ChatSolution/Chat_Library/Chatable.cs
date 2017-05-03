@@ -1,7 +1,4 @@
-﻿using System;
-using System.Runtime.Remoting.Messaging;
-
-namespace Chat_Library
+﻿namespace Chat_Library
 {
     using System.Collections.Generic;
     using System.Data.Entity;
