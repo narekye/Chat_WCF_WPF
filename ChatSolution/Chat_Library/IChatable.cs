@@ -34,7 +34,6 @@
         void SendToRoom(int roomindex, Message message);
         [OperationContract]
         List<Message> GetRoomMessages(int index);
-
         [OperationContract]
         int GetIndex(User us);
     }
