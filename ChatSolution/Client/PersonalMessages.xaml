@@ -9,8 +9,9 @@
     <Grid>
         <Button Height="20" VerticalAlignment="Top" Margin="5" Content="send" Click="Personal_Message"></Button>
         <Button Height="20" VerticalAlignment="Top" Content="update" Click="Update"  Margin="5,45,5,0"></Button>
-        <TextBox Name="res" Margin="5,84,5,93"/>
+        <TextBox Name="res" Margin="5,84,185,93"/>
         <TextBox Text="namak" Margin="5,193,5,37" x:Name="Box"></TextBox>
         <TextBox Text="to" Margin="5,232,5,10" x:Name="to"></TextBox>
+        <ComboBox Name="combo" Margin="142,108,23,124"></ComboBox>
     </Grid>
 </Window>

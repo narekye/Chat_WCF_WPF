@@ -24,22 +24,21 @@ namespace Client
         private static ChatableClient proxy = MainWindow._proxy;
         private User us = MainWindow.user;
         private int? roomid;
-        // private User sec = proxy.GetAllUsersAsync().ToList().FindLast(p => p.NickName == "narekye");
         public PersonalMessages()
         {
             InitializeComponent();
+            this.FillCombo();
+            roomid = proxy.CreateRoom(us);
         }
 
         private void Personal_Message(object sender, RoutedEventArgs e)
         {
-            
-
-            var message = new Message()
+            var uss = proxy.GetAllUsersAsync().FirstOrDefault(p => p.NickName == combo.Text);
+            var arax = proxy.GetIndex(uss);
+            if (proxy.EnterExsitingRoom(us, uss))
             {
-                MessageSender = us.NickName,
-                MessageContent = Box.Text
-            };
-            proxy.Send(message);
+                
+            }
         }
 
         private void Update(object sender, RoutedEventArgs e)
@@ -50,9 +49,13 @@ namespace Client
             }
         }
 
-        public void Func()
+        public async void FillCombo()
         {
-            
+            var list = await proxy.GetAllUsersAsyncFromDbAsync();
+            foreach (User user1 in list)
+            {
+                combo.Items.Add(user1.NickName);
+            }
         }
     }
 }

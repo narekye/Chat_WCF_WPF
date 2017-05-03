@@ -103,7 +103,10 @@
   </xs:element>
   <xs:element name="EnterExsitingRoom">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="first" nillable="true" type="q9:User" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="second" nillable="true" type="q10:User" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EnterExsitingRoomResponse">
@@ -121,15 +124,14 @@
   <xs:element name="GetAllRoomsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="GetAllRoomsResult" nillable="true" type="q9:ArrayOfPersonalRoom" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="GetAllRoomsResult" nillable="true" type="q11:ArrayOfPersonalRoom" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CreateRoom">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="first" nillable="true" type="q10:User" />
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="second" nillable="true" type="q11:User" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="first" nillable="true" type="q12:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -144,7 +146,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="roomindex" type="xs:int" />
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="message" nillable="true" type="q12:Message" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="message" nillable="true" type="q13:Message" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -163,7 +165,21 @@
   <xs:element name="GetRoomMessagesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="GetRoomMessagesResult" nillable="true" type="q13:ArrayOfMessage" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="GetRoomMessagesResult" nillable="true" type="q14:ArrayOfMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Chat_Library" minOccurs="0" name="us" nillable="true" type="q15:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndexResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIndexResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

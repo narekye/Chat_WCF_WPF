@@ -25,14 +25,17 @@
         void RemoveFromList(User users);
         // added 
         [OperationContract]
-        bool EnterExsitingRoom();
+        bool EnterExsitingRoom(User first, User second);
         [OperationContract]
         List<PersonalRoom> GetAllRooms();
         [OperationContract]
-        int CreateRoom(User first, User second);
+        int CreateRoom(User first);
         [OperationContract]
         void SendToRoom(int roomindex, Message message);
         [OperationContract]
         List<Message> GetRoomMessages(int index);
+
+        [OperationContract]
+        int GetIndex(User us);
     }
 }

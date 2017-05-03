@@ -329,10 +329,10 @@ namespace Client.Chat {
         System.Threading.Tasks.Task RemoveFromListAsync(Client.Chat.User users);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/EnterExsitingRoom", ReplyAction="http://tempuri.org/IChatable/EnterExsitingRoomResponse")]
-        bool EnterExsitingRoom();
+        bool EnterExsitingRoom(Client.Chat.User first, Client.Chat.User second);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/EnterExsitingRoom", ReplyAction="http://tempuri.org/IChatable/EnterExsitingRoomResponse")]
-        System.Threading.Tasks.Task<bool> EnterExsitingRoomAsync();
+        System.Threading.Tasks.Task<bool> EnterExsitingRoomAsync(Client.Chat.User first, Client.Chat.User second);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllRooms", ReplyAction="http://tempuri.org/IChatable/GetAllRoomsResponse")]
         Client.Chat.PersonalRoom[] GetAllRooms();
@@ -341,10 +341,10 @@ namespace Client.Chat {
         System.Threading.Tasks.Task<Client.Chat.PersonalRoom[]> GetAllRoomsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/CreateRoom", ReplyAction="http://tempuri.org/IChatable/CreateRoomResponse")]
-        int CreateRoom(Client.Chat.User first, Client.Chat.User second);
+        int CreateRoom(Client.Chat.User first);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/CreateRoom", ReplyAction="http://tempuri.org/IChatable/CreateRoomResponse")]
-        System.Threading.Tasks.Task<int> CreateRoomAsync(Client.Chat.User first, Client.Chat.User second);
+        System.Threading.Tasks.Task<int> CreateRoomAsync(Client.Chat.User first);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/SendToRoom", ReplyAction="http://tempuri.org/IChatable/SendToRoomResponse")]
         void SendToRoom(int roomindex, Client.Chat.Message message);
@@ -357,6 +357,12 @@ namespace Client.Chat {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetRoomMessages", ReplyAction="http://tempuri.org/IChatable/GetRoomMessagesResponse")]
         System.Threading.Tasks.Task<Client.Chat.Message[]> GetRoomMessagesAsync(int index);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetIndex", ReplyAction="http://tempuri.org/IChatable/GetIndexResponse")]
+        int GetIndex(Client.Chat.User us);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetIndex", ReplyAction="http://tempuri.org/IChatable/GetIndexResponse")]
+        System.Threading.Tasks.Task<int> GetIndexAsync(Client.Chat.User us);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -450,12 +456,12 @@ namespace Client.Chat {
             return base.Channel.RemoveFromListAsync(users);
         }
         
-        public bool EnterExsitingRoom() {
-            return base.Channel.EnterExsitingRoom();
+        public bool EnterExsitingRoom(Client.Chat.User first, Client.Chat.User second) {
+            return base.Channel.EnterExsitingRoom(first, second);
         }
         
-        public System.Threading.Tasks.Task<bool> EnterExsitingRoomAsync() {
-            return base.Channel.EnterExsitingRoomAsync();
+        public System.Threading.Tasks.Task<bool> EnterExsitingRoomAsync(Client.Chat.User first, Client.Chat.User second) {
+            return base.Channel.EnterExsitingRoomAsync(first, second);
         }
         
         public Client.Chat.PersonalRoom[] GetAllRooms() {
@@ -466,12 +472,12 @@ namespace Client.Chat {
             return base.Channel.GetAllRoomsAsync();
         }
         
-        public int CreateRoom(Client.Chat.User first, Client.Chat.User second) {
-            return base.Channel.CreateRoom(first, second);
+        public int CreateRoom(Client.Chat.User first) {
+            return base.Channel.CreateRoom(first);
         }
         
-        public System.Threading.Tasks.Task<int> CreateRoomAsync(Client.Chat.User first, Client.Chat.User second) {
-            return base.Channel.CreateRoomAsync(first, second);
+        public System.Threading.Tasks.Task<int> CreateRoomAsync(Client.Chat.User first) {
+            return base.Channel.CreateRoomAsync(first);
         }
         
         public void SendToRoom(int roomindex, Client.Chat.Message message) {
@@ -488,6 +494,14 @@ namespace Client.Chat {
         
         public System.Threading.Tasks.Task<Client.Chat.Message[]> GetRoomMessagesAsync(int index) {
             return base.Channel.GetRoomMessagesAsync(index);
+        }
+        
+        public int GetIndex(Client.Chat.User us) {
+            return base.Channel.GetIndex(us);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetIndexAsync(Client.Chat.User us) {
+            return base.Channel.GetIndexAsync(us);
         }
     }
 }

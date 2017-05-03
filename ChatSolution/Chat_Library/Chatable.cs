@@ -71,18 +71,17 @@ namespace Chat_Library
             var us = connectedUsers.FindLast(p => p.NickName == user.NickName);
             connectedUsers.Remove(us);
         }
-
-        public int CreateRoom(User first, User second)
+        // -----------------------------------
+        public int CreateRoom(User first)
         {
             List<User> list = new List<User>(2)
             {
-                first,second
+                first
             };
             _room.Add(new PersonalRoom()
             {
                 Users = list,
                 Messages = new List<Message>()
-                
             });
             return _room.Count - 1;
         }
@@ -102,20 +101,36 @@ namespace Chat_Library
             return _room;
         }
 
-        public bool EnterExsitingRoom()
+        public bool EnterExsitingRoom(User sender, User enter)
         {
+            PersonalRoom current = new PersonalRoom();
             foreach (PersonalRoom personalRoom in _room)
             {
-                foreach (User personalRoomUser in personalRoom.Users)
+                if (personalRoom.Users.Contains(sender))
                 {
-                    if (personalRoomUser != null)
-                    {
-                        
-                    }
+                    current = personalRoom;
+                    break;
+                }
+                current = null;
+            }
+            if (ReferenceEquals(current, null))
+                return false;
+
+
+            current.Users.Add(enter);
+            return true;
+        }
+
+        public int GetIndex(User us)
+        {
+            for (int i = 0; i < _room.Count; i++)
+            {
+                if (_room[i].Users.Contains(us))
+                {
+                    return i;
                 }
             }
-            return true;
-
+            return 0;
         }
     }
 }

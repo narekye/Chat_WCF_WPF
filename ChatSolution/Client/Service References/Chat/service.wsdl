@@ -85,6 +85,12 @@
   <wsdl:message name="IChatable_GetRoomMessages_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetRoomMessagesResponse" />
   </wsdl:message>
+  <wsdl:message name="IChatable_GetIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndex" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_GetIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexResponse" />
+  </wsdl:message>
   <wsdl:portType name="IChatable">
     <wsdl:operation name="Send">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Send" message="tns:IChatable_Send_InputMessage" />
@@ -137,6 +143,10 @@
     <wsdl:operation name="GetRoomMessages">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetRoomMessages" message="tns:IChatable_GetRoomMessages_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetRoomMessagesResponse" message="tns:IChatable_GetRoomMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetIndex" message="tns:IChatable_GetIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetIndexResponse" message="tns:IChatable_GetIndex_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IChatable" type="tns:IChatable">
@@ -251,6 +261,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetRoomMessages">
       <soap:operation soapAction="http://tempuri.org/IChatable/GetRoomMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndex">
+      <soap:operation soapAction="http://tempuri.org/IChatable/GetIndex" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
