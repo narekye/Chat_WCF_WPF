@@ -9,14 +9,8 @@
     {
         private readonly MessagesContext_ _db = new MessagesContext_();
         private static List<User> connectedUsers = new List<User>();
+        // for PM
         private static List<PersonalRoom> _room = new List<PersonalRoom>();
-
-        //static Chatable()
-        //{
-        //    _room.Users = new List<User>(2);
-        //    _room.Messages = new List<Message>();
-        //}
-
 
         public void Send(Message message)
         {
@@ -68,7 +62,7 @@
             var us = connectedUsers.FindLast(p => p.NickName == user.NickName);
             connectedUsers.Remove(us);
         }
-        // -----------------------------------
+        // TODO: PM messaging methods not completed
         public int CreateRoom(User first)
         {
             List<User> list = new List<User>(2)
