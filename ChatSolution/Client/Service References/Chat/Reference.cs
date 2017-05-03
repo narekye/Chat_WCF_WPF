@@ -215,6 +215,67 @@ namespace Client.Chat {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PersonalRoom", Namespace="http://schemas.datacontract.org/2004/07/Chat_Library")]
+    [System.SerializableAttribute()]
+    public partial class PersonalRoom : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Client.Chat.Message[] MessagesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Client.Chat.User[] UsersField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Client.Chat.Message[] Messages {
+            get {
+                return this.MessagesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessagesField, value) != true)) {
+                    this.MessagesField = value;
+                    this.RaisePropertyChanged("Messages");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Client.Chat.User[] Users {
+            get {
+                return this.UsersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsersField, value) != true)) {
+                    this.UsersField = value;
+                    this.RaisePropertyChanged("Users");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Chat.IChatable")]
     public interface IChatable {
@@ -266,6 +327,30 @@ namespace Client.Chat {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/RemoveFromList", ReplyAction="http://tempuri.org/IChatable/RemoveFromListResponse")]
         System.Threading.Tasks.Task RemoveFromListAsync(Client.Chat.User users);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllRooms", ReplyAction="http://tempuri.org/IChatable/GetAllRoomsResponse")]
+        Client.Chat.PersonalRoom[] GetAllRooms();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllRooms", ReplyAction="http://tempuri.org/IChatable/GetAllRoomsResponse")]
+        System.Threading.Tasks.Task<Client.Chat.PersonalRoom[]> GetAllRoomsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/CreateRoom", ReplyAction="http://tempuri.org/IChatable/CreateRoomResponse")]
+        int CreateRoom(Client.Chat.User first, Client.Chat.User second);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/CreateRoom", ReplyAction="http://tempuri.org/IChatable/CreateRoomResponse")]
+        System.Threading.Tasks.Task<int> CreateRoomAsync(Client.Chat.User first, Client.Chat.User second);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/SendToRoom", ReplyAction="http://tempuri.org/IChatable/SendToRoomResponse")]
+        void SendToRoom(int roomindex, Client.Chat.Message message);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/SendToRoom", ReplyAction="http://tempuri.org/IChatable/SendToRoomResponse")]
+        System.Threading.Tasks.Task SendToRoomAsync(int roomindex, Client.Chat.Message message);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetRoomMessages", ReplyAction="http://tempuri.org/IChatable/GetRoomMessagesResponse")]
+        Client.Chat.Message[] GetRoomMessages(int index);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetRoomMessages", ReplyAction="http://tempuri.org/IChatable/GetRoomMessagesResponse")]
+        System.Threading.Tasks.Task<Client.Chat.Message[]> GetRoomMessagesAsync(int index);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -357,6 +442,38 @@ namespace Client.Chat {
         
         public System.Threading.Tasks.Task RemoveFromListAsync(Client.Chat.User users) {
             return base.Channel.RemoveFromListAsync(users);
+        }
+        
+        public Client.Chat.PersonalRoom[] GetAllRooms() {
+            return base.Channel.GetAllRooms();
+        }
+        
+        public System.Threading.Tasks.Task<Client.Chat.PersonalRoom[]> GetAllRoomsAsync() {
+            return base.Channel.GetAllRoomsAsync();
+        }
+        
+        public int CreateRoom(Client.Chat.User first, Client.Chat.User second) {
+            return base.Channel.CreateRoom(first, second);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateRoomAsync(Client.Chat.User first, Client.Chat.User second) {
+            return base.Channel.CreateRoomAsync(first, second);
+        }
+        
+        public void SendToRoom(int roomindex, Client.Chat.Message message) {
+            base.Channel.SendToRoom(roomindex, message);
+        }
+        
+        public System.Threading.Tasks.Task SendToRoomAsync(int roomindex, Client.Chat.Message message) {
+            return base.Channel.SendToRoomAsync(roomindex, message);
+        }
+        
+        public Client.Chat.Message[] GetRoomMessages(int index) {
+            return base.Channel.GetRoomMessages(index);
+        }
+        
+        public System.Threading.Tasks.Task<Client.Chat.Message[]> GetRoomMessagesAsync(int index) {
+            return base.Channel.GetRoomMessagesAsync(index);
         }
     }
 }

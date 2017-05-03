@@ -23,5 +23,14 @@
         Task<List<User>> GetAllUsersAsyncFromDb();
         [OperationContract]
         void RemoveFromList(User users);
+        // added 
+        [OperationContract]
+        List<PersonalRoom> GetAllRooms();
+        [OperationContract]
+        int CreateRoom(User first, User second);
+        [OperationContract]
+        void SendToRoom(int roomindex, Message message);
+        [OperationContract]
+        List<Message> GetRoomMessages(int index);
     }
 }

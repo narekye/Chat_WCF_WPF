@@ -31,4 +31,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="ArrayOfPersonalRoom">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonalRoom" nillable="true" type="tns:PersonalRoom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonalRoom" nillable="true" type="tns:ArrayOfPersonalRoom" />
+  <xs:complexType name="PersonalRoom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfMessage" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalRoom" nillable="true" type="tns:PersonalRoom" />
 </xs:schema>

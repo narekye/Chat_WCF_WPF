@@ -74,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Messages.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MessagePm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Chatable.cs" />
     <Compile Include="User.cs">

@@ -55,6 +55,30 @@
   <wsdl:message name="IChatable_RemoveFromList_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveFromListResponse" />
   </wsdl:message>
+  <wsdl:message name="IChatable_GetAllRooms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRooms" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_GetAllRooms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoomsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_CreateRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRoom" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_CreateRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_SendToRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToRoom" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_SendToRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_GetRoomMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomMessages" />
+  </wsdl:message>
+  <wsdl:message name="IChatable_GetRoomMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomMessagesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IChatable">
     <wsdl:operation name="Send">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/Send" message="tns:IChatable_Send_InputMessage" />
@@ -87,6 +111,22 @@
     <wsdl:operation name="RemoveFromList">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatable/RemoveFromList" message="tns:IChatable_RemoveFromList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatable/RemoveFromListResponse" message="tns:IChatable_RemoveFromList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRooms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetAllRooms" message="tns:IChatable_GetAllRooms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetAllRoomsResponse" message="tns:IChatable_GetAllRooms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/CreateRoom" message="tns:IChatable_CreateRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/CreateRoomResponse" message="tns:IChatable_CreateRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/SendToRoom" message="tns:IChatable_SendToRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/SendToRoomResponse" message="tns:IChatable_SendToRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatable/GetRoomMessages" message="tns:IChatable_GetRoomMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatable/GetRoomMessagesResponse" message="tns:IChatable_GetRoomMessages_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IChatable" type="tns:IChatable">
@@ -156,6 +196,42 @@
     </wsdl:operation>
     <wsdl:operation name="RemoveFromList">
       <soap:operation soapAction="http://tempuri.org/IChatable/RemoveFromList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRooms">
+      <soap:operation soapAction="http://tempuri.org/IChatable/GetAllRooms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRoom">
+      <soap:operation soapAction="http://tempuri.org/IChatable/CreateRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToRoom">
+      <soap:operation soapAction="http://tempuri.org/IChatable/SendToRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomMessages">
+      <soap:operation soapAction="http://tempuri.org/IChatable/GetRoomMessages" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

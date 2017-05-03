@@ -1,0 +1,16 @@
+﻿<Window x:Class="Client.PersonalMessages"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="PersonalMessages" Height="300" Width="300">
+    <Grid>
+        <Button Height="20" VerticalAlignment="Top" Margin="5" Content="send" Click="Personal_Message"></Button>
+        <Button Height="20" VerticalAlignment="Top" Content="update" Click="Update"  Margin="5,45,5,0"></Button>
+        <TextBox Name="res" Margin="5,84,5,93"/>
+        <TextBox Text="namak" Margin="5,193,5,37" x:Name="Box"></TextBox>
+        <TextBox Text="to" Margin="5,232,5,10" x:Name="to"></TextBox>
+    </Grid>
+</Window>

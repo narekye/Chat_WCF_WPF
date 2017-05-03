@@ -1,4 +1,7 @@
-﻿namespace Chat_Library
+﻿using System;
+using System.Runtime.Remoting.Messaging;
+
+namespace Chat_Library
 {
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -9,6 +12,15 @@
     {
         private readonly MessagesContext_ _db = new MessagesContext_();
         private static List<User> connectedUsers = new List<User>();
+        private static List<PersonalRoom> _room = new List<PersonalRoom>();
+
+        //static Chatable()
+        //{
+        //    _room.Users = new List<User>(2);
+        //    _room.Messages = new List<Message>();
+        //}
+
+
         public void Send(Message message)
         {
             _db.Messages.Add(message);
@@ -58,6 +70,36 @@
         {
             var us = connectedUsers.FindLast(p => p.NickName == user.NickName);
             connectedUsers.Remove(us);
+        }
+
+        public int CreateRoom(User first, User second)
+        {
+            List<User> list = new List<User>(2)
+            {
+                first,second
+            };
+            _room.Add(new PersonalRoom()
+            {
+                Users = list,
+                Messages = new List<Message>()
+                
+            });
+            return _room.Count - 1;
+        }
+
+        public void SendToRoom(int roomindex, Message message)
+        {
+            _room[roomindex].Messages.Add(message);
+        }
+
+        public List<Message> GetRoomMessages(int index)
+        {
+            return _room[index].Messages;
+        }
+
+        public List<PersonalRoom> GetAllRooms()
+        {
+            return _room;
         }
     }
 }

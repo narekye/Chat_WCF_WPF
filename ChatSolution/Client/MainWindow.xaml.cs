@@ -89,9 +89,11 @@
         }
         private void Feed_Click(object sender, RoutedEventArgs e) => new Feedback().Show();
 
-        private void About_Click(object sender, RoutedEventArgs e) => new AboutWin().Show();
+
+        // TODO: replace this event....
+        private void About_Click(object sender, RoutedEventArgs e) => new PersonalMessages().Show(); //new AboutWin().Show();
         #endregion
 
-      
+
     }
 }
