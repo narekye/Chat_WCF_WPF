@@ -25,6 +25,8 @@
         void RemoveFromList(User users);
         // added 
         [OperationContract]
+        bool EnterExsitingRoom();
+        [OperationContract]
         List<PersonalRoom> GetAllRooms();
         [OperationContract]
         int CreateRoom(User first, User second);

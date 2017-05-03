@@ -101,6 +101,18 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="EnterExsitingRoom">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnterExsitingRoomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnterExsitingRoomResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAllRooms">
     <xs:complexType>
       <xs:sequence />

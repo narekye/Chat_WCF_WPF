@@ -101,5 +101,21 @@ namespace Chat_Library
         {
             return _room;
         }
+
+        public bool EnterExsitingRoom()
+        {
+            foreach (PersonalRoom personalRoom in _room)
+            {
+                foreach (User personalRoomUser in personalRoom.Users)
+                {
+                    if (personalRoomUser != null)
+                    {
+                        
+                    }
+                }
+            }
+            return true;
+
+        }
     }
 }

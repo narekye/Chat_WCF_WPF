@@ -328,6 +328,12 @@ namespace Client.Chat {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/RemoveFromList", ReplyAction="http://tempuri.org/IChatable/RemoveFromListResponse")]
         System.Threading.Tasks.Task RemoveFromListAsync(Client.Chat.User users);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/EnterExsitingRoom", ReplyAction="http://tempuri.org/IChatable/EnterExsitingRoomResponse")]
+        bool EnterExsitingRoom();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/EnterExsitingRoom", ReplyAction="http://tempuri.org/IChatable/EnterExsitingRoomResponse")]
+        System.Threading.Tasks.Task<bool> EnterExsitingRoomAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatable/GetAllRooms", ReplyAction="http://tempuri.org/IChatable/GetAllRoomsResponse")]
         Client.Chat.PersonalRoom[] GetAllRooms();
         
@@ -442,6 +448,14 @@ namespace Client.Chat {
         
         public System.Threading.Tasks.Task RemoveFromListAsync(Client.Chat.User users) {
             return base.Channel.RemoveFromListAsync(users);
+        }
+        
+        public bool EnterExsitingRoom() {
+            return base.Channel.EnterExsitingRoom();
+        }
+        
+        public System.Threading.Tasks.Task<bool> EnterExsitingRoomAsync() {
+            return base.Channel.EnterExsitingRoomAsync();
         }
         
         public Client.Chat.PersonalRoom[] GetAllRooms() {
