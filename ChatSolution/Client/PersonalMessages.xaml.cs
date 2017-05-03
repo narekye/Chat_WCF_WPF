@@ -23,7 +23,7 @@ namespace Client
     {
         private static ChatableClient proxy = MainWindow._proxy;
         private User us = MainWindow.user;
-        private int? roomid = null;
+        private int? roomid;
         private User sec = proxy.GetAllUsersAsync().ToList().FindLast(p => p.NickName == "narekye");
         public PersonalMessages()
         {
@@ -48,10 +48,6 @@ namespace Client
             {
                 res.Text += room.Users[0].NickName;
             }
-            //foreach (Message roomMessage in proxy.GetRoomMessages())
-            //{
-            //    res.Text += roomMessage.MessageSender + ": " + roomMessage.MessageContent;
-            //}
         }
     }
 }
