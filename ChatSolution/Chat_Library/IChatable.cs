@@ -14,7 +14,7 @@
         [OperationContract]
         Task<bool> LoginAsync(User user);
         [OperationContract]
-        Task<bool> RegisterAsync(User user); 
+        Task<bool> RegisterAsync(User user);
         [OperationContract]
         void SendMail(User user);
         [OperationContract]
@@ -24,6 +24,11 @@
         [OperationContract]
         void RemoveFromList(User users);
         // added for PM
+
+        #region PM
+
+
+
         [OperationContract]
         bool EnterExsitingRoom(User first, User second);
         [OperationContract]
@@ -32,9 +37,10 @@
         int CreateRoom(User first);
         [OperationContract]
         void SendToRoom(int roomindex, Message message);
-        [OperationContract] 
+        [OperationContract]
         List<Message> GetRoomMessages(int index);
         [OperationContract]
         int GetIndex(User us);
+        #endregion
     }
 }

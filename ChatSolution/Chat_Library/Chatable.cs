@@ -1,5 +1,8 @@
-﻿namespace Chat_Library
+﻿using System;
+
+namespace Chat_Library
 {
+    using System.Windows;
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
@@ -11,6 +14,8 @@
         private static List<User> connectedUsers = new List<User>();
         // for PM
         private static List<PersonalRoom> _room = new List<PersonalRoom>();
+
+        
 
         public void Send(Message message)
         {
@@ -68,6 +73,7 @@
             List<User> list = new List<User>(2)
             {
                 first
+               
             };
             _room.Add(new PersonalRoom()
             {
@@ -122,6 +128,12 @@
                 }
             }
             return 0;
+        }
+
+        public bool InviteToChat(User sender)
+        {
+            CreateRoom(sender);
+            return true;
         }
     }
 }
