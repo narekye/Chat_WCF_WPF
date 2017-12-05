@@ -1,0 +1,66 @@
+﻿<!-- This control supports drag and drop of photo files -->
+<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2006" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    x:Class="WPFChatter.ChatControl"
+    Width="550" Height="450" BorderBrush="#FF000000"
+    AllowDrop="False">
+
+
+  <StackPanel>
+
+
+
+    <Border x:Name="borderTop" Width="550" Height="64" Background="#FF000000" BorderBrush="#FF000000" BorderThickness="2,2,2,0" CornerRadius="5,5,0,0">
+      <StackPanel>
+        <Label HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="285" Height="46" Content="You Are Now Chatting......" FontFamily="Agency FB" FontSize="30" FontWeight="Bold" Foreground="#FFFFFFFF"/>
+      	<Label HorizontalAlignment="Right" Margin="0,-50,0,30" x:Name="lblExit" VerticalAlignment="Top" Width="30" Height="36" Content="ý" FontFamily="Wingdings" FontSize="25" Foreground="#FFFFFDFD"/>
+      </StackPanel>
+    </Border>
+    <Border x:Name="borderMiddle" Width="Auto" Height="300" BorderBrush="#FF000000" BorderThickness="2,0,2,0" CornerRadius="0,0,0,0" VerticalAlignment="Stretch">
+      <Border.Background>
+        <LinearGradientBrush EndPoint="0.713,0.698" StartPoint="0.713,-0.139">
+          <GradientStop Color="#FFFFFFFF" Offset="0.933"/>
+          <GradientStop Color="#FFFFC934" Offset="0.337"/>
+        </LinearGradientBrush>
+      </Border.Background>
+	  <Grid>
+    	<Label Width="181" Content="Incoming Chat Messages" HorizontalAlignment="Left" Margin="10,141,0,132" FontFamily="Agency FB" FontSize="15" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="VerticalAlignment">
+    		<Label.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform ScaleX="1" ScaleY="1"/>
+    				<SkewTransform AngleX="0" AngleY="0"/>
+    				<RotateTransform Angle="0"/>
+    				<TranslateTransform X="0" Y="0"/>
+    			</TransformGroup>
+    		</Label.RenderTransform>
+    	</Label>
+	  	<Border Margin="10,0,10,17" VerticalAlignment="Bottom" Height="115" Background="#FFFFC936" CornerRadius="5,5,5,5" d:LayoutOverrides="VerticalAlignment">
+	  		<TextBox Margin="5,5,5,5" x:Name="txtMessages" Width="Auto" Height="Auto" BorderBrush="{x:Null}" FontFamily="Agency FB" FontSize="15" Text="" TextWrapping="Wrap" IsEnabled="True" Cursor="IBeam"  ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True" />
+	  	</Border>
+	  	<Label Height="27" Content="You" FontFamily="Agency FB" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="111" x:Name="lblCurrPersonName"/>
+	  	<Border HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="70" Height="70" Background="#FFFAFAFA" BorderBrush="#FFFCFCFC" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5">
+	  		<Image x:Name="imgMine" Width="Auto" Height="Auto" Stretch="Fill"/>
+	  	</Border>
+	  	<Border HorizontalAlignment="Left" Margin="125,35,0,0" VerticalAlignment="Top" Width="60" Height="60" Background="#4CFEFEFE" BorderBrush="#FFFAFAFA" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5">
+	  		<Image x:Name="imgOther" Width="Auto" Height="Auto" Stretch="Fill"/>
+	  	</Border>		
+	  	<Label Height="27" Content="Other Chatter" FontFamily="Agency FB" FontSize="15" FontWeight="Bold" Width="119" HorizontalAlignment="Left" Margin="125,8,0,0" VerticalAlignment="Top" Foreground="#4C000000" x:Name="lblOtherPersonName"/>		
+	  	<Border Margin="248,35,10,0" VerticalAlignment="Top" Height="60" Background="#FFF8F8F8" CornerRadius="5,5,5,5">
+	  		<TextBox Cursor="Arrow" x:Name="txtMessage" Width="Auto" Height="Auto" BorderBrush="{x:Null}" FontFamily="Agency FB" FontSize="15" FontWeight="Normal" Text="" TextWrapping="Wrap"   ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+	  	</Border>
+	  	<Label Height="27" Content="Enter Your Message Here" FontFamily="Agency FB" FontSize="15" FontWeight="Bold" Width="155" HorizontalAlignment="Left" Margin="250,8,0,0" VerticalAlignment="Top"/>
+	  	<Button Margin="240,-70,227,0" x:Name="btnSay" Width="64" Height="22" Content="Say" Template="{StaticResource SignInButtonTemplate}" HorizontalAlignment="Stretch"/>
+      <Button Margin="300,-70,141,0" x:Name="btnWhisper" Width="64" Height="22" Content="Whisper" Template="{StaticResource SignInButtonTemplate}"/>		
+	  </Grid>
+    </Border>
+    <Border Width="Auto" Height="36" Background="#FF2E2E2E" BorderBrush="#FF000000" BorderThickness="2,0,2,2" CornerRadius="0,0,5,5">
+      <Label Width="245" Height="21" Content="WPF/WCF Chat by Sacha Barber" FontFamily="Arial" FontSize="9" FontWeight="Normal" Foreground="#FFFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="#00FFFFFF"/>
+    </Border>
+
+
+
+  </StackPanel>
+
+</UserControl>

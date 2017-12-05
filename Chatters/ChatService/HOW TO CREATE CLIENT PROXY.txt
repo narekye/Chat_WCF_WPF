@@ -1,0 +1,7 @@
+svcutil ChatService.exe
+svcutil *.wsdl *.xsd /language:C# /out:MyProxy.cs /config:app.config
+
+
+FOR ASYNCH
+
+svcutil *.wsdl *.xsd /a /language:C# /out:MyProxy.cs /config:app.config

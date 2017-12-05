@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ADFF1AB8-CBE5-4575-90CB-04E1D40C210E}"
+	ProjectSection(SolutionItems) = preProject
+		ChatService\HOW TO CREATE CLIENT PROXY.txt = ChatService\HOW TO CREATE CLIENT PROXY.txt
+		TODO.txt = TODO.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatService", "ChatService\ChatService.csproj", "{DD577760-8113-409A-B2B8-DE6F8C267F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{37999231-F81C-4638-974E-66D2D736D19C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFChatter", "WPFChatter\WPFChatter.csproj", "{9AFE07B2-EBD3-4385-A533-CB58EDAF64EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD577760-8113-409A-B2B8-DE6F8C267F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD577760-8113-409A-B2B8-DE6F8C267F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD577760-8113-409A-B2B8-DE6F8C267F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD577760-8113-409A-B2B8-DE6F8C267F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37999231-F81C-4638-974E-66D2D736D19C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37999231-F81C-4638-974E-66D2D736D19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37999231-F81C-4638-974E-66D2D736D19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37999231-F81C-4638-974E-66D2D736D19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AFE07B2-EBD3-4385-A533-CB58EDAF64EB}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9AFE07B2-EBD3-4385-A533-CB58EDAF64EB}.Release|Any CPU.ActiveCfg = Debug|x86
+		{9AFE07B2-EBD3-4385-A533-CB58EDAF64EB}.Release|Any CPU.Build.0 = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8BF33FE-B6B7-40FF-94AA-CD19F9434E2A}
+	EndGlobalSection
+EndGlobal

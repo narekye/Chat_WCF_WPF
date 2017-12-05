@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="WPFChatter.ChatControl">
+    <Position X="3.75" Y="13.5" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>ChatControl.xaml.cs</FileName>
+      <HashCode>EQBAIAAIgAAABQAAAQQEAgAAAAAAgAAQAAAAAAEAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFChatter.ProxyEventArgs">
+    <Position X="5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Proxy_Singleton.cs</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFChatter.ProxyCallBackEventArgs">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Proxy_Singleton.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAACAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFChatter.Proxy_Singleton" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Proxy_Singleton.cs</FileName>
+      <HashCode>AABABkAAAgAEAggAAAgAAoAABQAUAgAQAgAAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Delegate Name="WPFChatter.Proxy_Singleton.HandleDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Proxy_Singleton.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="WPFChatter.Proxy_Singleton.HandleErrorDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Proxy_Singleton.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="WPFChatter.Proxy_Singleton.ProxyEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Proxy_Singleton.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="WPFChatter.Proxy_Singleton.ProxyCallBackEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Proxy_Singleton.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WPFChatter.SignInControl">
+    <Position X="3.75" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>SignInControl.xaml.cs</FileName>
+      <HashCode>AAAAABAAAEAABAAAAAQEACAACAAAACAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFChatter.Window1">
+    <Position X="0.5" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Window1.xaml.cs</FileName>
+      <HashCode>AQBAAABAAAAACAAEAEQAAgAAAAAQECCQAgGAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Delegate Name="WPFChatter.Window1.ProxySingleton_ProxyEvent_Delegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Window1.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+  </Class>
+  <Class Name="ChatProxy" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>ChatService.cs</FileName>
+      <HashCode>AAAAAAAAABAABAAAAAAAABAAAAEAAQAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="IChat">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ChatService.cs</FileName>
+      <HashCode>AAAAAAAAABAABAAAAAAAABAAAAEAAQAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IChatCallback">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ChatService.cs</FileName>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAgAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IChatChannel" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ChatService.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="WPFChatter.CallBackType">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Proxy_Singleton.cs</FileName>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAgAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>
